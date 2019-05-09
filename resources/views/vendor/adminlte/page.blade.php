@@ -106,17 +106,17 @@
             @if(config('adminlte.layout') == 'top-nav')
             <div class="container">
             @endif
-
+            <!-- Content Breadcrumbs -->
+            <section class="content-breadcrumbs">
+                @yield('breadcrumbs')
+            </section>
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 @yield('content_header')
             </section>
-
             <!-- Main content -->
             <section class="content">
-
                 @yield('content')
-
             </section>
             <!-- /.content -->
             @if(config('adminlte.layout') == 'top-nav')

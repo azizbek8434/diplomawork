@@ -9,13 +9,13 @@
 
         <div class="pull-left">
 
-            <h2>Edit New User</h2>
+            <h2>Фойдаланувчини таҳрирлаш</h2>
 
         </div>
 
         <div class="pull-right">
 
-            <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('users.index') }}"> Орқага</a>
 
         </div>
 
@@ -28,7 +28,7 @@
 
   <div class="alert alert-danger">
 
-    <strong>Whoops!</strong> There were some problems with your input.<br><br>
+    <strong>Whoops!</strong> Киришингиз билан боғлиқ айрим муаммолар мавжуд.<br><br>
 
     <ul>
 
@@ -53,21 +53,9 @@
 
         <div class="form-group">
 
-            <strong>Name:</strong>
+            <strong>Исм:</strong>
 
-            {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
-
-        </div>
-
-    </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-12">
-
-        <div class="form-group">
-
-            <strong>Email:</strong>
-
-            {!! Form::text('email', null, array('placeholder' => 'Email','class' => 'form-control')) !!}
+            {!! Form::text('name', null, array('placeholder' => 'Исм','class' => 'form-control')) !!}
 
         </div>
 
@@ -77,21 +65,9 @@
 
         <div class="form-group">
 
-            <strong>Password:</strong>
+            <strong>Э-почта:</strong>
 
-            {!! Form::password('password', array('placeholder' => 'Password','class' => 'form-control')) !!}
-
-        </div>
-
-    </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-12">
-
-        <div class="form-group">
-
-            <strong>Confirm Password:</strong>
-
-            {!! Form::password('confirm-password', array('placeholder' => 'Confirm Password','class' => 'form-control')) !!}
+            {!! Form::text('email', null, array('placeholder' => 'Э-почта','class' => 'form-control')) !!}
 
         </div>
 
@@ -101,7 +77,43 @@
 
         <div class="form-group">
 
-            <strong>Role:</strong>
+            <strong>Худуд:</strong>
+            
+            {!! Form::select('region_id',$regions, $userRegion, array('class' => 'form-control')) !!}
+
+        </div>
+
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+
+        <div class="form-group">
+
+            <strong>Парол:</strong>
+
+            {!! Form::password('password', array('placeholder' => 'Парол','class' => 'form-control')) !!}
+
+        </div>
+
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+
+        <div class="form-group">
+
+            <strong>Паролни тасдиқланг:</strong>
+
+            {!! Form::password('confirm-password', array('placeholder' => 'Паролни тасдиқланг','class' => 'form-control')) !!}
+
+        </div>
+
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+
+        <div class="form-group">
+
+            <strong>Рол:</strong>
 
             {!! Form::select('roles[]', $roles,$userRole, array('class' => 'form-control','multiple')) !!}
 
@@ -111,7 +123,7 @@
 
     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Сақлаш</button>
 
     </div>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Region;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
@@ -29,8 +30,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        $roles = Role::all();
-        return view('admin.users.create',compact('roles'));
+        $regions = Region::get(['id', 'name']);
+        $roles = Role::pluck('name','name')->all();
+        return view('admin.users.create',compact('roles','regions'));
     }
 
     /**
@@ -67,7 +69,8 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-        return view('admin.users.show', compact('user'));
+        $region = $user->region;
+        return view('admin.users.show', compact('user','region'));
     }
 
     /**
@@ -78,10 +81,12 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
-        $roles = Role::pluck('name', 'name')->all();
+        $user = User::with('region')->findOrFail($id);
+        $regions = Region::pluck('name','id')->all();
+        $userRegion = $user->region()->pluck('name','id')->all();
+        $roles = Role::pluck('name','name')->all();
         $userRole = $user->roles->pluck('name','name')->all();
-        return view('admin.users.edit', compact('user', 'roles', 'userRole'));
+        return view('admin.users.edit', compact('user', 'roles', 'userRole','regions', 'userRegion'));
     }
 
     /**
@@ -96,25 +101,24 @@ class UserController extends Controller
         $this->validate($request,
         [
             'name' => 'required',
-            'email' => 'required|email|unique:users,email'.$id,
+            'region_id' => 'required|exists:regions,id',
+            'email' => 'required|email|unique:users,email,'.$id,
             'password' => 'same:confirm-password',
             'roles' => 'required'
         ]);
-
         $input = $request->all();
         if(!empty($input['password'])){
             $input['password'] = Hash::make($input['password']);
         }else{
-            $input = array_except($input['password']);
+            $input = array_except($input,array('password'));   
         }
-
-        $user = User::findOrFail();
+        $user = User::findOrFail($id);
         $user->update($input);
-        DB::table('model_has_roles')->where('model-id', $id)->delete();
+        DB::table('model_has_roles')->where('model_id', $id)->delete();
+        // dd($request->input('roles'));
         $user->assignRole($request->input('roles'));
         return redirect()->route('users.index')
         ->with('success', 'Фойдаланувчи муваффақиятли янгиланди.');
-
     }
 
     /**

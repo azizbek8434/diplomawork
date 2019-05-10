@@ -10,4 +10,9 @@ class Region extends Model
         'name', 
         'slug'
     ];
+
+    public function users()
+    {
+        return $this->hasMane(User::class);
+    }
 }

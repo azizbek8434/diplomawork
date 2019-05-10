@@ -42,8 +42,7 @@
   </div>
 
 @endif
-<form action="{{ route('users.store') }}" method="POST">
-    @csrf
+{!! Form::open(array('route' => 'users.store','method'=>'POST')) !!}
 
 <div class="row">
 
@@ -53,8 +52,8 @@
 
             <strong>Name:</strong>
 
-            <input type="text" name="name" class="form-control" placeholder="Name">
-            
+            {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
+
         </div>
 
     </div>
@@ -65,7 +64,7 @@
 
             <strong>Email:</strong>
 
-            <input type="email" name="email" class="form-control" placeholder="Email">
+            {!! Form::text('email', null, array('placeholder' => 'Email','class' => 'form-control')) !!}
 
         </div>
 
@@ -77,7 +76,7 @@
 
             <strong>Password:</strong>
 
-            <input type="password" name="password" class="form-control" placehold="Password">
+            {!! Form::password('password', array('placeholder' => 'Password','class' => 'form-control')) !!}
 
         </div>
 
@@ -86,11 +85,13 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
 
         <div class="form-group">
+
             <strong>Confirm Password:</strong>
 
-            <input type="password" name="confirm-password" class="form-control" placehold="Confirm Password">
+            {!! Form::password('confirm-password', array('placeholder' => 'Confirm Password','class' => 'form-control')) !!}
 
         </div>
+
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-12">
@@ -99,12 +100,7 @@
 
             <strong>Role:</strong>
 
-            <select name="roles[]" class="form-control">
-                @foreach ($roles as $role)
-                    <option values="{{ $role->id }}">{{ $role->name }}</option>
-                @endforeach
-
-            </select>
+            {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
 
         </div>
 
@@ -118,6 +114,6 @@
 
 </div>
 
-</form>
+{!! Form::close() !!}
 
 @endsection

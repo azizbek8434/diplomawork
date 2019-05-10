@@ -41,13 +41,15 @@
 
    <th>No</th>
 
-   <th>Name</th>
+   <th>Исм</th>
 
-   <th>Email</th>
+   <th>Худуд</th>
 
-   <th>Roles</th>
+   <th>Э-почта</th>
 
-   <th width="280px">Action</th>
+   <th>Роллар</th>
+
+   <th width="280px">Амаллар</th>
 
  </tr>
 
@@ -58,6 +60,8 @@
     <td>{{ ++$i }}</td>
 
     <td>{{ $user->name }}</td>
+
+    <td>{{ optional($user->region)->name }}</td>
 
     <td>{{ $user->email }}</td>
 
@@ -77,13 +81,13 @@
 
     <td>
 
-       <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
+       <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Кўриш</a>
 
-       <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
+       <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Таҳрирлаш</a>
 
         {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
 
-            {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+            {!! Form::submit('Ўчириш', ['class' => 'btn btn-danger']) !!}
 
         {!! Form::close() !!}
 

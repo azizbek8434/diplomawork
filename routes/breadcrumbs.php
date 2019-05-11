@@ -1,19 +1,31 @@
 <?php
-// Home
+// Dashboard
 Breadcrumbs::for('dashboard', function ($trail) {
     $trail->push('Бош саҳифа', route('dashboard'));
 });
 
-// Home > About
-Breadcrumbs::for('about', function ($trail) {
-    $trail->parent('home');
-    $trail->push('About', route('about'));
+// Home > Users
+Breadcrumbs::for('users', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Фойдаланувчилар', route('users.index'));
 });
 
-// Home > Blog
-Breadcrumbs::for('blog', function ($trail) {
-    $trail->parent('home');
-    $trail->push('Blog', route('blog'));
+// Home > Users > Create
+Breadcrumbs::for('users_create', function ($trail) {
+    $trail->parent('users');
+    $trail->push('Қўшиш', route('users.create'));
+});
+
+// Home > Users > Edit
+Breadcrumbs::for('users_edit', function ($trail) {
+    $trail->parent('users');
+    $trail->push('Таҳрирлаш', route('users.edit',['id' => '']));
+});
+
+// Home > Users > Show
+Breadcrumbs::for('users_show', function ($trail) {
+    $trail->parent('users');
+    $trail->push('Кўриш', route('users.show',['id' => '']));
 });
 
 // Home > Blog > [Category]

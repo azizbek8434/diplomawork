@@ -30,7 +30,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        $regions = Region::get(['id', 'name']);
+
+        $regions = Region::pluck('name','id')->all();
         $roles = Role::pluck('name','name')->all();
         return view('admin.users.create',compact('roles','regions'));
     }
@@ -43,10 +44,10 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
         $this->validate($request,
         [
             'name' => 'required',
+            'region_id' => 'required|exists:regions,id',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|same:confirm-password',
             'roles' => 'required'

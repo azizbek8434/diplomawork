@@ -1,5 +1,6 @@
 @extends('adminlte::page')
 
+@section('breadcrumbs', Breadcrumbs::render('users_edit'))
 
 @section('content')
 

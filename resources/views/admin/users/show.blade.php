@@ -1,6 +1,5 @@
 @extends('adminlte::page')
-
-
+@section('breadcrumbs', Breadcrumbs::render('users_show'))
 @section('content')
 
 <div class="row">
@@ -9,13 +8,13 @@
 
         <div class="pull-left">
 
-            <h2> Show User</h2>
+            <h2>Фойдаланувчини кўриш</h2>
 
         </div>
 
         <div class="pull-right">
 
-            <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('users.index') }}"> Орқага</a>
 
         </div>
 
@@ -30,7 +29,7 @@
 
         <div class="form-group">
 
-            <strong>Name:</strong>
+            <strong>Исм:</strong>
 
             {{ $user->name }}
 
@@ -42,7 +41,7 @@
 
         <div class="form-group">
 
-            <strong>Email:</strong>
+            <strong>Э-почта:</strong>
 
             {{ $user->email }}
 
@@ -54,7 +53,19 @@
 
         <div class="form-group">
 
-            <strong>Roles:</strong>
+            <strong>Худуд:</strong>
+
+            {{ optional($user->region)->name }}
+
+        </div>
+
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+
+        <div class="form-group">
+
+            <strong>Рол:</strong>
 
             @if(!empty($user->getRoleNames()))
 

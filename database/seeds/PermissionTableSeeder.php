@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 
 class PermissionTableSeeder extends Seeder
@@ -23,20 +24,14 @@ class PermissionTableSeeder extends Seeder
         'role-edit',
 
         'role-delete',
-
-        'post-list',
-
-        'post-create',
-
-        'post-edit',
-
-        'post-delete'
+        
         ];
 
         foreach ($permissions as $permission) {
-
-            Permission::create(['name' => $permission]);
-
+            $role = Role::find(1);
+            $permission = Permission::create(['name' => $permission]);
+            $role->givePermissionTo($permission);
        }
+    
     }
 }

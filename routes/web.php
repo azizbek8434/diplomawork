@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,11 +17,13 @@ Route::get('/', function(){
 
 Route::group([
     'prefix' => 'dashboard',
-    // 'namespace' => 'Admin',
     'middleware' => 'auth'
 ], function() {
+    
     Route::get('/', 'HomeController@index')->name('dashboard');
-    Route::resource('roles','RoleController');
-    Route::resource('users','UserController');
-    Route::resource('regions','RegionController');
+    Route::group(['middleware' => ['role:Admin|User']], function () {
+        Route::resource('users','UserController');
+        Route::resource('roles','RoleController');
+        Route::resource('regions','RegionController');
+    });
 });

@@ -53,7 +53,7 @@ class UserController extends Controller
             'roles' => 'required'
         ]);
         $input = $request->all();
-        $input['password'] = Hash::mahe($input['password']);
+        $input['password'] = Hash::make($input['password']);
         $user = User::create($input);
         $user->assignRole($request->input('roles'));
         return redirect()->route('users.index')
@@ -116,7 +116,6 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->update($input);
         DB::table('model_has_roles')->where('model_id', $id)->delete();
-        // dd($request->input('roles'));
         $user->assignRole($request->input('roles'));
         return redirect()->route('users.index')
         ->with('success', 'Фойдаланувчи муваффақиятли янгиланди.');

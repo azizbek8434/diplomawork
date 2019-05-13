@@ -215,74 +215,42 @@ return [
         ],
         'ПРОФИЛ СОЗЛАМАЛАРИ',
         [
-            'text' => 'Профил',
+            'text' => 'Паролни ўзгартириш',
+            'url'  => 'dashboard/profile',
             'icon' => 'user',
+        ],
+        [
+            'text' => 'Бошқа Созламалар',
+            'role' => 'Admin',
+            'icon' => 'gear',
             'submenu' => [
                 [
-                    'text' => 'Паролни ўзгартириш',
-                    'url'  => 'dashboard/settings/changepass',
-                    'icon' => 'lock',
+                    'text' => 'Фойдаланувчилар',
+                    'role' => 'Admin',
+                    'url'  => 'dashboard/users',
+                    'icon' => 'users',
+                ],
+                [
+                    'text' => 'Роллар',
+                    'role' => 'Admin',
+                    'url'  => 'dashboard/roles',
+                    'icon' => 'magic',
+                ],
+                [
+                    'text' => 'Рухсатномалар',
+                    'role' => 'Admin',
+                    'url'  => 'dashboard/permissions',
+                    'icon' => 'key',
+                ],
+                [
+                    'text' => 'Вилоятлар',
+                    'role' => 'Admin',
+                    'url'  => 'dashboard/regions',
+                    'icon' => 'list',
+                    
                 ],
             ],
         ],
-        [
-            'text' => 'Фойдаланувчилар',
-            'url'  => 'dashboard/users',
-            'icon' => 'users',
-        ],
-        [
-            'text' => 'Вилоятлар',
-            'url'  => 'dashboard/settings/regions',
-            'icon' => 'list',
-            
-        ],
-        // [
-        //     'text'    => 'Multilevel',
-        //     'icon'    => 'share',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'Level One',
-        //             'url'  => '#',
-        //         ],
-        //         [
-        //             'text'    => 'Level One',
-        //             'url'     => '#',
-        //             'submenu' => [
-        //                 [
-        //                     'text' => 'Level Two',
-        //                     'url'  => '#',
-        //                 ],
-        //                 [
-        //                     'text'    => 'Level Two',
-        //                     'url'     => '#',
-        //                     'submenu' => [
-        //                         [
-        //                             'text' => 'Level Three',
-        //                             'url'  => '#',
-        //                         ],
-        //                         [
-        //                             'text' => 'Level Three',
-        //                             'url'  => '#',
-        //                         ],
-        //                     ],
-        //                 ],
-        //             ],
-        //         ],
-        //     ],
-        // ],
-        // 'YORLIQLAR',
-        // [
-        //     'text'       => 'Important',
-        //     'icon_color' => 'red',
-        // ],
-        // [
-        //     'text'       => 'Warning',
-        //     'icon_color' => 'yellow',
-        // ],
-        // [
-        //     'text'       => 'Information',
-        //     'icon_color' => 'aqua',
-        // ],
     ],
 
     /*

@@ -1,5 +1,5 @@
 @extends('adminlte::page')
-@section('breadcrumbs', Breadcrumbs::render('users_show'))
+@section('breadcrumbs', Breadcrumbs::render('users.show',$user))
 @section('content')
 
 <div class="row">

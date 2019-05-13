@@ -5,37 +5,25 @@ Breadcrumbs::for('dashboard', function ($trail) {
 });
 
 // Home > Users
-Breadcrumbs::for('users', function ($trail) {
+Breadcrumbs::for('users.index', function ($trail) {
     $trail->parent('dashboard');
     $trail->push('Фойдаланувчилар', route('users.index'));
 });
 
 // Home > Users > Create
-Breadcrumbs::for('users_create', function ($trail) {
-    $trail->parent('users');
+Breadcrumbs::for('users.create', function ($trail) {
+    $trail->parent('users.index');
     $trail->push('Қўшиш', route('users.create'));
 });
 
-// Home > Users > Edit
-Breadcrumbs::for('users_edit', function ($trail) {
-    $trail->parent('users');
-    $trail->push('Таҳрирлаш', route('users.edit',['id' => '']));
-});
-
 // Home > Users > Show
-Breadcrumbs::for('users_show', function ($trail) {
-    $trail->parent('users');
-    $trail->push('Кўриш', route('users.show',['id' => '']));
+Breadcrumbs::for('users.show', function ($trail, $user) {
+    $trail->parent('users.index');
+    $trail->push($user->id, route('users.show', $user->id));
 });
 
-// Home > Blog > [Category]
-Breadcrumbs::for('category', function ($trail, $category) {
-    $trail->parent('blog');
-    $trail->push($category->title, route('category', $category->id));
-});
-
-// Home > Blog > [Category] > [Post]
-Breadcrumbs::for('post', function ($trail, $post) {
-    $trail->parent('category', $post->category);
-    $trail->push($post->title, route('post', $post->id));
+// Home > Users > Edit
+Breadcrumbs::for('users.edit', function ($trail, $user){
+    $trail->parent('users.index');
+    $trail->push($user->id, route('users.edit',$user->id));
 });

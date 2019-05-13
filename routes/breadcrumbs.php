@@ -4,26 +4,51 @@ Breadcrumbs::for('dashboard', function ($trail) {
     $trail->push('Бош саҳифа', route('dashboard'));
 });
 
-// Home > Users
+// Dashboard > Users
 Breadcrumbs::for('users.index', function ($trail) {
     $trail->parent('dashboard');
     $trail->push('Фойдаланувчилар', route('users.index'));
 });
 
-// Home > Users > Create
+// Dashboard > Users > Create
 Breadcrumbs::for('users.create', function ($trail) {
     $trail->parent('users.index');
     $trail->push('Қўшиш', route('users.create'));
 });
 
-// Home > Users > Show
+// Dashboard > Users > Show
 Breadcrumbs::for('users.show', function ($trail, $user) {
     $trail->parent('users.index');
     $trail->push($user->id, route('users.show', $user->id));
 });
 
-// Home > Users > Edit
+// Dashboard > Users > Edit
 Breadcrumbs::for('users.edit', function ($trail, $user){
     $trail->parent('users.index');
     $trail->push($user->id, route('users.edit',$user->id));
+});
+
+
+// Dashboard > Roles
+Breadcrumbs::for('roles.index', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Роллар', route('roles.index'));
+});
+
+// Dashboard > Roles > Create
+Breadcrumbs::for('roles.create', function ($trail) {
+    $trail->parent('roles.index');
+    $trail->push('Қўшиш', route('roles.create'));
+});
+
+// Dashboard > Roles > Show
+Breadcrumbs::for('roles.show', function ($trail, $role) {
+    $trail->parent('roles.index');
+    $trail->push($role->id, route('roles.show', $role->id));
+});
+
+// Dashboard > Roles > Edit
+Breadcrumbs::for('roles.edit', function ($trail, $role){
+    $trail->parent('roles.index');
+    $trail->push($role->id, route('roles.edit',$role->id));
 });

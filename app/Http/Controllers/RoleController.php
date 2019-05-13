@@ -30,8 +30,8 @@ class RoleController extends Controller
     public function index()
     {
         $roles = Role::orderBy('id','DESC')->paginate(5);
-        return view('roles.index', compact('roles'))
-            ->with('i', ($request->input("page", 1) - 1) * 5);
+        return view('admin.roles.index', compact('roles'))
+            ->with('i', (request()->input("page", 1) - 1) * 5);
     }
 
     /**
@@ -42,7 +42,7 @@ class RoleController extends Controller
     public function create()
     {
         $permission = Permission::get();
-        return view('roles.create', compact('permission'));
+        return view('admin.roles.create', compact('permission'));
     }
 
     /**
@@ -67,7 +67,7 @@ class RoleController extends Controller
         $role->syncPermissions($request->input('permission'));
 
 
-        return redirect()->route('roles.index')
+        return redirect()->route('admin.roles.index')
 
                         ->with('success','Рол муваффақият билан яратилди');
     }
@@ -89,7 +89,7 @@ class RoleController extends Controller
             ->get();
 
 
-        return view('roles.show',compact('role','rolePermissions'));
+        return view('admin.roles.show',compact('role','rolePermissions'));
     }
 
     /**
@@ -111,7 +111,7 @@ class RoleController extends Controller
             ->all();
 
 
-        return view('roles.edit',compact('role','permission','rolePermissions'));
+        return view('admin.roles.edit',compact('role','permission','rolePermissions'));
     }
 
     /**
@@ -142,7 +142,7 @@ class RoleController extends Controller
         $role->syncPermissions($request->input('permission'));
 
 
-        return redirect()->route('roles.index')
+        return redirect()->route('admin.roles.index')
 
                         ->with('success','Рол муваффақиятли янгиланди');
     }
@@ -157,7 +157,7 @@ class RoleController extends Controller
     {
         DB::table("roles")->where('id',$id)->delete();
 
-        return redirect()->route('roles.index')
+        return redirect()->route('admin.roles.index')
 
                         ->with('success','Рол муваффақиятли ўчирилди');
     }

@@ -67,7 +67,7 @@ class RoleController extends Controller
         $role->syncPermissions($request->input('permission'));
 
 
-        return redirect()->route('admin.roles.index')
+        return redirect()->route('roles.index')
 
                         ->with('success','Рол муваффақият билан яратилди');
     }
@@ -142,7 +142,7 @@ class RoleController extends Controller
         $role->syncPermissions($request->input('permission'));
 
 
-        return redirect()->route('admin.roles.index')
+        return redirect()->route('roles.index')
 
                         ->with('success','Рол муваффақиятли янгиланди');
     }
@@ -157,7 +157,7 @@ class RoleController extends Controller
     {
         DB::table("roles")->where('id',$id)->delete();
 
-        return redirect()->route('admin.roles.index')
+        return redirect()->route('roles.index')
 
                         ->with('success','Рол муваффақиятли ўчирилди');
     }

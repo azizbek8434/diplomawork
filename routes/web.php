@@ -25,5 +25,6 @@ Route::group([
         Route::resource('users','UserController');
         Route::resource('roles','RoleController');
         Route::resource('regions','RegionController');
+        Route::resource('permissions','PermissionController');
     });
 });

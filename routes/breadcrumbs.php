@@ -52,3 +52,29 @@ Breadcrumbs::for('roles.edit', function ($trail, $role){
     $trail->parent('roles.index');
     $trail->push($role->id, route('roles.edit',$role->id));
 });
+
+
+
+// Dashboard > Permissions
+Breadcrumbs::for('permissions.index', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Рухсатномалар', route('permissions.index'));
+});
+
+// Dashboard > Permissions > Create
+Breadcrumbs::for('permissions.create', function ($trail) {
+    $trail->parent('permissions.index');
+    $trail->push('Қўшиш', route('permissions.create'));
+});
+
+// Dashboard > Permissions > Show
+Breadcrumbs::for('permissions.show', function ($trail, $perm) {
+    $trail->parent('permissions.index');
+    $trail->push($perm->id, route('permissions.show', $perm->id));
+});
+
+// Dashboard > Permissions > Edit
+Breadcrumbs::for('permissions.edit', function ($trail, $perm){
+    $trail->parent('permissions.index');
+    $trail->push($perm->id, route('permissions.edit',$perm->id));
+});

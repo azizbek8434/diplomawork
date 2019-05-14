@@ -133,4 +133,36 @@ class UserController extends Controller
         return redirect()->route('users.index')
             ->with('success', 'Фойдаланувчи муваффақиятли ўчирилди.');
     }
+
+    public function profile(){
+        $id = \Auth::user()->id;
+        $user = User::with('region')->findOrFail($id);
+        $userRegion = $user->region()->pluck('name','id')->all();
+        $userRole = $user->roles->pluck('name','name')->all();
+        return view('admin.users.profile', compact('user', 'userRole', 'userRegion'));
+    }
+
+    public function uprofile(Request $request, $id){
+        $this->validate($request,
+        [
+            'name' => 'required',
+            'region_id' => 'required|exists:regions,id',
+            'email' => 'required|email|unique:users,email,'.$id,
+            'password' => 'same:confirm-password',
+            'roles' => 'required'
+        ]);
+        
+        $input = $request->all();
+        if(!empty($input['password'])){
+            $input['password'] = Hash::make($input['password']);
+        }else{
+            $input = array_except($input,array('password'));   
+        }
+        $user = User::findOrFail($id);
+        $user->update($input);
+        DB::table('model_has_roles')->where('model_id', $id)->delete();
+        $user->assignRole($request->input('roles'));
+        return redirect()->route('users.index')
+        ->with('success', 'Фойдаланувчи муваффақиятли янгиланди.');
+    }
 }

@@ -28,6 +28,12 @@ Breadcrumbs::for('users.edit', function ($trail, $user){
     $trail->push($user->id, route('users.edit',$user->id));
 });
 
+// Dashboard > Profile
+Breadcrumbs::for('users.profile', function ($trail, $user){
+    $trail->parent('dashboard');
+    $trail->push('Менинг профилим', route('users.profile',$user->id));
+});
+
 
 // Dashboard > Roles
 Breadcrumbs::for('roles.index', function ($trail) {

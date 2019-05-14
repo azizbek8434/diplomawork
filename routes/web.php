@@ -26,5 +26,7 @@ Route::group([
         Route::resource('roles','RoleController');
         Route::resource('regions','RegionController');
         Route::resource('permissions','PermissionController');
+        Route::get('profile','UserController@profile')->name('users.profile');
+        Route::patch('profile/{id}','UserController@uprofile')->name('users.uprofile');
     });
 });

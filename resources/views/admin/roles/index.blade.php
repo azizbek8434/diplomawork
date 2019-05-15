@@ -16,7 +16,7 @@
 
         <div class="pull-right">
 
-        @can('role-create')
+        @can('role-list')
 
             <a class="btn btn-success" href="{{ route('roles.create') }}"> Қўшиш</a>
 
@@ -64,13 +64,13 @@
 
             <a class="btn btn-info" href="{{ route('roles.show',$role->id) }}">Кўриш</a>
 
-            @can('role-edit')
+            @can('role-list')
 
                 <a class="btn btn-primary" href="{{ route('roles.edit',$role->id) }}">Таҳрирлаш</a>
 
             @endcan
 
-            @can('role-delete')
+            @can('role-list')
 
                 {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline']) !!}
 

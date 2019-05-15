@@ -14,16 +14,20 @@
 
         </div>
 
-        <div class="pull-right">
-
-            <a class="btn btn-primary" href="{{ route('users.index') }}"> Орқага</a>
-
-        </div>
-
     </div>
 
 </div>
 
+
+@if ($message = Session::get('success'))
+
+<div class="alert alert-success">
+
+  <p>{{ $message }}</p>
+
+</div>
+
+@endif
 
 @if (count($errors) > 0)
 
@@ -131,6 +135,4 @@
 </div>
 
 {!! Form::close() !!}
-
-
 @endsection

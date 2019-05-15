@@ -16,7 +16,7 @@
 
         <div class="pull-right">
 
-        @can('role-create')
+        @can('perm-list')
 
             <a class="btn btn-success" href="{{ route('permissions.create') }}"> Қўшиш</a>
 
@@ -64,13 +64,13 @@
 
             <a class="btn btn-info" href="{{ route('permissions.show',$perm->id) }}">Кўриш</a>
 
-            @can('role-edit')
+            @can('perm-list')
 
                 <a class="btn btn-primary" href="{{ route('permissions.edit',$perm->id) }}">Таҳрирлаш</a>
 
             @endcan
 
-            @can('role-delete')
+            @can('perm-list')
 
                 {!! Form::open(['method' => 'DELETE','route' => ['permissions.destroy', $perm->id],'style'=>'display:inline']) !!}
 

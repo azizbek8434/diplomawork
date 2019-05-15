@@ -21,7 +21,7 @@ Route::group([
 ], function() {
     
     Route::get('/', 'HomeController@index')->name('dashboard');
-    Route::group(['middleware' => ['role:Admin|User']], function () {
+    Route::group(['middleware' => ['role:Admin|Inspector|User']], function () {
         Route::resource('users','UserController');
         Route::resource('roles','RoleController');
         Route::resource('regions','RegionController');

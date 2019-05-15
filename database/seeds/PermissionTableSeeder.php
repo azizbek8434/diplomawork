@@ -17,21 +17,39 @@ class PermissionTableSeeder extends Seeder
 
     $permissions = [
 
+        'farg-ona-tumani',
+        'bog-dod-tumani',
+        'besharik-tumani',
+        'buvayda-tumani',
+        'dang-ara-tumani',
+        'yozovon-tumani',
+        'k-ushtepa-tumani',
+        'k-uva-tumani',
+        'rishton-tumani',
+        'oltarik-tumani',
+        'toshlok-tumani',
+        'uzbekiston-tumani',
+        'furk-at-tumani',
+        'uchkurik-tumani',
+        'sukh-tumani',
+        'farg-ona-shahar',
+        'k-uvasoy-shahar',
+        'k-uk-on-shahar',
+        'marg-ilon-shahar',
         'role-list',
-
-        'role-create',
-
-        'role-edit',
-
-        'role-delete',
-        
+        'perm-list',
+        'user-list', 
+        'settings-list',
+        'default-list'
         ];
 
         foreach ($permissions as $permission) {
-            $role = Role::find(1);
             $permission = Permission::create(['name' => $permission]);
-            $role->givePermissionTo($permission);
        }
-    
+
+        $role = Role::find(1);
+        $role->givePermissionTo(Permission::all());
+        $role = Role::find(2);
+        $role->givePermissionTo(['default-list']);
     }
 }

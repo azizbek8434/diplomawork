@@ -20,6 +20,12 @@ class RolesTableSeeder extends Seeder
             'updated_at' => new DateTime
             ],
             [
+            'name' => 'Inspector',
+            'guard_name' => 'web',
+            'created_at' => new DateTime,
+            'updated_at' => new DateTime
+            ],
+            [
             'name' => 'User',
             'guard_name' => 'web',
             'created_at' => new DateTime,

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Traits\UserPermissions;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -9,16 +10,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable, HasRoles;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password','region_id'
-    ];
+    use Notifiable, HasRoles,UserPermissions;
+    protected $with = ['roles'];
+    protected $appends = ['can',  'binded_role'];
+    protected $fillable = ['name', 'email', 'password','region_id'];
 
     /**
      * The attributes that should be hidden for arrays.

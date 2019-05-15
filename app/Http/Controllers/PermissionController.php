@@ -8,6 +8,12 @@ use Spatie\Permission\Models\Permission;
 
 class PermissionController extends Controller
 {
+
+    function __construct()
+    {
+        $this->middleware('permission:perm-list');
+    }
+
     /**
      * Display a listing of the resource.
      *

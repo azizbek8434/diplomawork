@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:user-list', ['except' => ['profile','uprofile']]);
+        // $this->middleware('permission:default-list', ['only' => ['uprofile','profile']]);
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -56,6 +62,8 @@ class UserController extends Controller
         $input['password'] = Hash::make($input['password']);
         $user = User::create($input);
         $user->assignRole($request->input('roles'));
+        $permission = $user->region->slug;
+        $user->givePermissionTo($permission);
         return redirect()->route('users.index')
             ->with('success', 'Фойдаланувчи муваффақиятли яратилди.');
 
@@ -117,6 +125,8 @@ class UserController extends Controller
         $user->update($input);
         DB::table('model_has_roles')->where('model_id', $id)->delete();
         $user->assignRole($request->input('roles'));
+        $permission = $user->region->slug;
+        $user->givePermissionTo($permission);
         return redirect()->route('users.index')
         ->with('success', 'Фойдаланувчи муваффақиятли янгиланди.');
     }
@@ -162,7 +172,6 @@ class UserController extends Controller
         $user->update($input);
         DB::table('model_has_roles')->where('model_id', $id)->delete();
         $user->assignRole($request->input('roles'));
-        return redirect()->route('users.index')
-        ->with('success', 'Фойдаланувчи муваффақиятли янгиланди.');
+        return redirect()->route('users.profile')->with('success', 'Фойдаланувчи муваффақиятли янгиланди.');
     }
 }

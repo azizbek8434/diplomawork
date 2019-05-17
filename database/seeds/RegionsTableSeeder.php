@@ -14,10 +14,10 @@ class RegionsTableSeeder extends Seeder
     {
         DB::table('regions')->insert([
             [
-            'name' => 'Фарғона тумани',
-            'slug' => 'farg-ona-tumani',
-            'created_at' => new DateTime,
-            'updated_at' => new DateTime
+                'name' => 'Фарғона тумани',
+                'slug' => 'farg-ona-tumani',
+                'created_at' => new DateTime,
+                'updated_at' => new DateTime
             ],
             [
                 'name' => 'Боғдод тумани',
@@ -131,6 +131,3 @@ class RegionsTableSeeder extends Seeder
         ]);
     }
 }
-
-
-

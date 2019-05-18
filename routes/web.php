@@ -28,5 +28,8 @@ Route::group([
         Route::resource('permissions','PermissionController');
         Route::get('profile','UserController@profile')->name('users.profile');
         Route::patch('profile/{id}','UserController@uprofile')->name('users.uprofile');
+        Route::get('/test','HomeController@test')->name('content.test');
+        Route::get('/{region}','HomeController@list')->name('content.region');
+        Route::get('/{region}/{type?}','HomeController@type')->name('content.type');
     });
 });

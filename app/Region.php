@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class Region extends Model
 {
@@ -10,9 +11,19 @@ class Region extends Model
         'name', 
         'slug'
     ];
-
+    
+    public function getRouteKeyName()
+	{
+		return 'slug';
+    }
+    
     public function users()
     {
-        return $this->hasMane(User::class);
+        return $this->hasMany(User::class);
     }
+
+    public function complaints()
+    {
+        return $this->hasMany(Complaint::class);
+	}
 }

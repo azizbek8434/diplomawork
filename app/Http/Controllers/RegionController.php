@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Region;
 use Illuminate\Http\Request;
 
 class RegionController extends Controller
@@ -13,7 +14,12 @@ class RegionController extends Controller
      */
     public function index()
     {
-        //
+        
+    }
+
+    public function list(Request $request, $slug){
+        $region = Region::where('slug', $slug)->get();
+        return $region;
     }
 
     /**

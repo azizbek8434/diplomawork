@@ -118,117 +118,136 @@ return [
         // 'ФАРГОНА ВИЛОЯТИ',
         [
             'text'        => 'Фарғона тумани',
-            'url'         => 'dashboard/regions/farg-ona-tumani',
+            'url'         => 'dashboard/farg-ona-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'farg-ona-tumani',
+            'label'       => '12'
         ],
         [
             'text'        => 'Боғдод тумани',
-            'url'         => 'dashboard/regions/bog-dod-tumani',
+            'url'         => 'dashboard/bog-dod-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'bog-dod-tumani',
+            'label'       => '32'
         ],
         [
             'text'        => 'Бешариқ тумани',
-            'url'         => 'dashboard/regions/besharik-tumani',
+            'url'         => 'dashboard/besharik-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'besharik-tumani',
+            'label'       => '23'
         ],
         [
             'text'        => 'Бувайда тумани',
-            'url'         => 'dashboard/regions/buvayda-tumani',
+            'url'         => 'dashboard/buvayda-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'buvayda-tumani',
+            'label'       => '14'
         ],
         [
             'text'        => 'Данғара тумани',
-            'url'         => 'dashboard/regions/dang-ara-tumani',
+            'url'         => 'dashboard/dang-ara-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'dang-ara-tumani',
+            'label'       => '44'
         ],
         [
             'text'        => 'Ёзовон тумани',
-            'url'         => 'dashboard/regions/yozovon-tumani',
+            'url'         => 'dashboard/yozovon-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'yozovon-tumani',
+            'label'       => '47'
         ],
         [
             'text'        => 'Қўштепа тумани',
-            'url'         => 'dashboard/regions/k-ushtepa-tumani',
+            'url'         => 'dashboard/k-ushtepa-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'k-ushtepa-tumani',
+            'label'       => '83'
         ],
         [
             'text'        => 'Қува тумани',
-            'url'         => 'dashboard/regions/k-uva-tumani',
+            'url'         => 'dashboard/k-uva-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'k-uva-tumani',
+            'label'       => '4'
         ],
         [
             'text'        => 'Олтариқ тумани',
-            'url'         => 'dashboard/regions/oltarik-tumani',
+            'url'         => 'dashboard/oltarik-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'oltarik-tumani',
+            'label'       => '24'
         ],
         [
             'text'        => 'Риштон тумани',
-            'url'         => 'dashboard/regions/rishton-tumani',
+            'url'         => 'dashboard/rishton-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'rishton-tumani',
+            'label'       => '143'
         ],
         [
             'text'        => 'Тошлоқ тумани',
-            'url'         => 'dashboard/regions/toshlok-tumani',
+            'url'         => 'dashboard/toshlok-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'toshlok-tumani',
+            'label'       => '244'
         ],
         [
             'text'        => 'Ўзбекистон тумани',
-            'url'         => 'dashboard/regions/uzbekiston-tumani',
+            'url'         => 'dashboard/uzbekiston-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'uzbekiston-tumani',
+            'label'       => '214'
         ],
         [
             'text'        => 'Фурқат тумани',
-            'url'         => 'dashboard/regions/furk-at-tumani',
+            'url'         => 'dashboard/furk-at-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'furk-at-tumani',
+            'label'       => '134'
         ],
         [
             'text'        => 'Учкўрик тумани',
-            'url'         => 'dashboard/regions/uchkurik-tumani',
+            'url'         => 'dashboard/uchkurik-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'uchkurik-tumani',
+            'label'       => '112'
         ],
         [
             'text'        => 'Сўҳ тумани',
-            'url'         => 'dashboard/regions/sukh-tumani',
+            'url'         => 'dashboard/sukh-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'sukh-tumani',
+            'label'       => '4'
         ],
         [
             'text'        => 'Фарғона шахар',
-            'url'         => 'dashboard/regions/farg-ona-shahar',
+            'url'         => 'dashboard/farg-ona-shahar',
             'icon'        => 'circle-thin',
             'can'         => 'farg-ona-shahar',
+            'label'       => '402'
         ],
         [
             'text'        => 'Қувасой шахар',
-            'url'         => 'dashboard/regions/k-uvasoy-shahar',
+            'url'         => 'dashboard/k-uvasoy-shahar',
             'icon'        => 'circle-thin',
             'can'         => 'k-uvasoy-shahar',
+            'label'       => '41'
         ],
         [
             'text'        => 'Қўқон шахар',
-            'url'         => 'dashboard/regions/k-uk-on-shahar',
+            'url'         => 'dashboard/k-uk-on-shahar',
             'icon'        => 'circle-thin',
             'can'         => 'k-uk-on-shahar',
+            'label'       => '123'
         ],
         [
             'text'        => 'Марғилон шахар',
-            'url'         => 'dashboard/regions/marg-ilon-shahar',
+            'url'         => 'dashboard/marg-ilon-shahar',
             'icon'        => 'circle-thin',
             'can'         => 'marg-ilon-shahar',
+            'label'       => '24'
         ],
         'ПРОФИЛ СОЗЛАМАЛАРИ',
         [
@@ -267,7 +286,7 @@ return [
                 // [
                 //     'text' => 'Вилоятлар',
                 //     'role' => 'Admin',
-                //     'url'  => 'dashboard/regions',
+                //     'url'  => 'dashboard',
                 //     'icon' => 'list',
                     
                 // ],

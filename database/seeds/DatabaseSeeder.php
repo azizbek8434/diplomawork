@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PermissionTableSeeder::class);
         $this->call(ComplaintTypeTableSeeder::class);
         $this->call(NeighborhoodCitizensTableSeeder::class);
-        $this->call(ComplaintTypeTableSeeder::class);
+        $this->call(ComplaintTableSeeder::class);
+        
     }
 }

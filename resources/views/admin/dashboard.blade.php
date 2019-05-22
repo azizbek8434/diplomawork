@@ -187,7 +187,7 @@
             <div class="box-header">
               <i class="ion ion-clipboard"></i>
 
-              <h3 class="box-title">To Do List</h3>
+              <h3 class="box-title">ЕСЛАТМАЛАР!</h3>
 
               <div class="box-tools pull-right">
                 <ul class="pagination pagination-sm inline">
@@ -211,7 +211,7 @@
                   <!-- checkbox -->
                   <input type="checkbox" value="">
                   <!-- todo text -->
-                  <span class="text">Design a nice theme</span>
+                  <span class="text">нотугри малумотлар базадан олиб ташлансин</span>
                   <!-- Emphasis label -->
                   <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
                   <!-- General tools such as edit or delete-->
@@ -226,7 +226,7 @@
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                   <input type="checkbox" value="">
-                  <span class="text">Make the theme responsive</span>
+                  <span class="text">муаммоларни турларига караб йозинлар</span>
                   <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
                   <div class="tools">
                     <i class="fa fa-edit"></i>
@@ -239,7 +239,7 @@
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                   <input type="checkbox" value="">
-                  <span class="text">Let theme shine like a star</span>
+                  <span class="text">25 май куни сектр йигилиш</span>
                   <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
                   <div class="tools">
                     <i class="fa fa-edit"></i>
@@ -252,7 +252,7 @@
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                   <input type="checkbox" value="">
-                  <span class="text">Let theme shine like a star</span>
+                  <span class="text">30 майга кадар ахоли муаммолари киритилсин</span>
                   <small class="label label-success"><i class="fa fa-clock-o"></i> 3 days</small>
                   <div class="tools">
                     <i class="fa fa-edit"></i>
@@ -265,7 +265,7 @@
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                   <input type="checkbox" value="">
-                  <span class="text">Check your messages and notifications</span>
+                  <span class="text">12 ва 34 карорга мувофик муаммолар киритилсин</span>
                   <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 week</small>
                   <div class="tools">
                     <i class="fa fa-edit"></i>
@@ -278,7 +278,7 @@
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                   <input type="checkbox" value="">
-                  <span class="text">Let theme shine like a star</span>
+                  <span class="text">ойлик хисоботлар киритилсин</span>
                   <small class="label label-default"><i class="fa fa-clock-o"></i> 1 month</small>
                   <div class="tools">
                     <i class="fa fa-edit"></i>
@@ -352,12 +352,12 @@
   new Chart(document.getElementById("bar-chart"), {
       type: 'bar',
       data: {
-        labels: ["Фарғона", "Марғилон", "Қўқон", "Қувасой", "Боғдод"],
+        labels: ["Фарғона", "Марғилон", "Қўқон", "Қувасой", "Боғдод", "Сух", "Риштон"],
         datasets: [
           {
             label: "Шикоятлар (миллион)",
-            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-            data: [2478,5267,734,784,433]
+            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#ba5850","#6f5850"],
+            data: [2478,5267,734,784,433,2600,3467]
           }
         ]
       },
@@ -365,7 +365,7 @@
         legend: { display: false },
         title: {
           display: true,
-          text: 'Тахминий шикоятлар (миллион) in 2050'
+          text: 'Тахминий шикоятлар (миллион) 2019'
         }
       }
   });

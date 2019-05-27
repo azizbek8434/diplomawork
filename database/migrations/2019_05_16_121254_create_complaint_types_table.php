@@ -16,6 +16,7 @@ class CreateComplaintTypesTable extends Migration
         Schema::create('complaint_types', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->nullable();
+            $table->string('slug')->nullable();
             $table->unsignedInteger('parent_id')->nullable()->index();
             $table->integer('position')->nullable();
             $table->boolean('status')->default(0);

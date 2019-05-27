@@ -4,6 +4,21 @@ Breadcrumbs::for('dashboard', function ($trail) {
     $trail->push('Бош саҳифа', route('dashboard'));
 });
 
+Breadcrumbs::for('content.region', function ($trail, $region) {
+    $trail->push('Бош саҳифа', route('dashboard'));
+    $trail->push($region->name, route('content.region',$region));
+});
+
+// Breadcrumbs::for('content.type', function ($trail,$region) {
+//     $trail->parent('content.type',$);
+//     $trail->push('as', route('content.type'));
+// });
+
+Breadcrumbs::for('', function ($trail, $region) {
+    $trail->push('Бош саҳифа', route('dashboard'));
+    $trail->push($region->slug, route('content',$region));
+});
+
 // Dashboard > Users
 Breadcrumbs::for('users.index', function ($trail) {
     $trail->parent('dashboard');

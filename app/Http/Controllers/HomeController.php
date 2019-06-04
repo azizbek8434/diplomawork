@@ -6,6 +6,7 @@ use App\Region;
 use App\Complaint;
 use App\ComplaintType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -29,26 +30,31 @@ class HomeController extends Controller
         return view('admin.dashboard');
     }
 
-    public function list(Region $region)
+    public function region(Region $region)
     {
-        $complaint_types = ComplaintType::parents()->get();
-        return view('admin.content_type',compact('complaint_types','region'));
-    }
-    public function type($region, $type = 'aoli')
-    {
-        $region = Region::where('slug', $region)->first();
-        $complaints = Complaint::with('region')
-        ->where(function ($query) use ($region) {
-            $query->whereRegionId($region->id);
-        })->get();
-        // dd($complaints);
-        return view('admin.content_detail',compact('complaints', 'region'));
+        $complaint_types = ComplaintType::parents()->get()->toArray();
+    
+        return view('admin.suptypes',compact('complaint_types','region'));
     }
 
-    public function test(){
-        $type = ComplaintType::find(1)->with('parent')->get();
-        
-        return $type;
+    public function suptype(Region $region, ComplaintType $suptype)
+    {   
+        $complaint_types = ComplaintType::subtypes($suptype->id)->get()->toArray();
+        // dd($complaint_types);
+        return view('admin.subtypes',compact('complaint_types', 'region', 'suptype'));
     }
 
+    public function subtype(Region $region, ComplaintType $suptype, $subtype)
+    {
+        $subtype = ComplaintType::where('slug', $subtype)->first(); 
+        if($subtype){
+            $complaints = Complaint::with('region','complaintType','neighborhoodCitizen')
+            ->where(function ($query) use ($region, $subtype) {
+            $query->whereRegionId($region->id)
+            ->whereComplaintTypeId($subtype->id);
+            })->get();
+        }
+    
+        return view('admin.complaints',compact('complaints', 'region', 'suptype', 'subtype'));
+    }
 }

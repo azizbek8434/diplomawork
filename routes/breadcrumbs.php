@@ -4,20 +4,21 @@ Breadcrumbs::for('dashboard', function ($trail) {
     $trail->push('Бош саҳифа', route('dashboard'));
 });
 
-Breadcrumbs::for('content.region', function ($trail, $region) {
-    $trail->push('Бош саҳифа', route('dashboard'));
-    $trail->push($region->name, route('content.region',$region));
+Breadcrumbs::for('content.suptype', function ($trail, $region) {
+    $trail->parent('dashboard');
+    $trail->push($region->name, url('dashboard/'. $region->slug));
 });
 
-// Breadcrumbs::for('content.type', function ($trail,$region) {
-//     $trail->parent('content.type',$);
-//     $trail->push('as', route('content.type'));
-// });
-
-Breadcrumbs::for('', function ($trail, $region) {
-    $trail->push('Бош саҳифа', route('dashboard'));
-    $trail->push($region->slug, route('content',$region));
+Breadcrumbs::for('content.subtype', function ($trail, $region, $suptype) {
+    $trail->parent('content.suptype',$region);
+    $trail->push($suptype->name, url('dashboard/'. $region->slug .'/'.$suptype->slug));
 });
+
+Breadcrumbs::for('complaint.list', function ($trail, $region, $suptype, $subtype) {
+    $trail->parent('content.subtype',$region, $suptype);
+    $trail->push($subtype->name, url('dashboard/'. $region->slug .'/'.$suptype->slug.'/'.$subtype->slug));
+});
+
 
 // Dashboard > Users
 Breadcrumbs::for('users.index', function ($trail) {
@@ -73,8 +74,6 @@ Breadcrumbs::for('roles.edit', function ($trail, $role){
     $trail->parent('roles.index');
     $trail->push($role->id, route('roles.edit',$role->id));
 });
-
-
 
 // Dashboard > Permissions
 Breadcrumbs::for('permissions.index', function ($trail) {

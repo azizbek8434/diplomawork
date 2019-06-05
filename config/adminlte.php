@@ -121,98 +121,98 @@ return [
             'url'         => 'dashboard/farg-ona-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'farg-ona-tumani',
-            'label'       => '12'
+            'label'       => '8'
         ],
         [
             'text'        => 'Боғдод тумани',
             'url'         => 'dashboard/bog-dod-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'bog-dod-tumani',
-            'label'       => '32'
+            'label'       => '4'
         ],
         [
             'text'        => 'Бешариқ тумани',
             'url'         => 'dashboard/besharik-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'besharik-tumani',
-            'label'       => '23'
+            'label'       => '5'
         ],
         [
             'text'        => 'Бувайда тумани',
             'url'         => 'dashboard/buvayda-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'buvayda-tumani',
-            'label'       => '14'
+            'label'       => '3'
         ],
         [
             'text'        => 'Данғара тумани',
             'url'         => 'dashboard/dang-ara-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'dang-ara-tumani',
-            'label'       => '44'
+            'label'       => '6'
         ],
         [
             'text'        => 'Ёзовон тумани',
             'url'         => 'dashboard/yozovon-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'yozovon-tumani',
-            'label'       => '47'
+            'label'       => '9'
         ],
         [
             'text'        => 'Қўштепа тумани',
             'url'         => 'dashboard/k-ushtepa-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'k-ushtepa-tumani',
-            'label'       => '83'
+            'label'       => '4'
         ],
         [
             'text'        => 'Қува тумани',
             'url'         => 'dashboard/k-uva-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'k-uva-tumani',
-            'label'       => '4'
+            'label'       => '8'
         ],
         [
             'text'        => 'Олтариқ тумани',
             'url'         => 'dashboard/oltarik-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'oltarik-tumani',
-            'label'       => '24'
+            'label'       => '4'
         ],
         [
             'text'        => 'Риштон тумани',
             'url'         => 'dashboard/rishton-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'rishton-tumani',
-            'label'       => '143'
+            'label'       => '7'
         ],
         [
             'text'        => 'Тошлоқ тумани',
             'url'         => 'dashboard/toshlok-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'toshlok-tumani',
-            'label'       => '244'
+            'label'       => '6'
         ],
         [
             'text'        => 'Ўзбекистон тумани',
             'url'         => 'dashboard/uzbekiston-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'uzbekiston-tumani',
-            'label'       => '214'
+            'label'       => '2'
         ],
         [
             'text'        => 'Фурқат тумани',
             'url'         => 'dashboard/furk-at-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'furk-at-tumani',
-            'label'       => '134'
+            'label'       => '3'
         ],
         [
             'text'        => 'Учкўрик тумани',
             'url'         => 'dashboard/uchkurik-tumani',
             'icon'        => 'circle-thin',
             'can'         => 'uchkurik-tumani',
-            'label'       => '112'
+            'label'       => '4'
         ],
         [
             'text'        => 'Сўҳ тумани',
@@ -226,28 +226,28 @@ return [
             'url'         => 'dashboard/farg-ona-shahar',
             'icon'        => 'circle-thin',
             'can'         => 'farg-ona-shahar',
-            'label'       => '402'
+            'label'       => '5'
         ],
         [
             'text'        => 'Қувасой шахар',
             'url'         => 'dashboard/k-uvasoy-shahar',
             'icon'        => 'circle-thin',
             'can'         => 'k-uvasoy-shahar',
-            'label'       => '41'
+            'label'       => '6'
         ],
         [
             'text'        => 'Қўқон шахар',
             'url'         => 'dashboard/k-uk-on-shahar',
             'icon'        => 'circle-thin',
             'can'         => 'k-uk-on-shahar',
-            'label'       => '123'
+            'label'       => '6'
         ],
         [
             'text'        => 'Марғилон шахар',
             'url'         => 'dashboard/marg-ilon-shahar',
             'icon'        => 'circle-thin',
             'can'         => 'marg-ilon-shahar',
-            'label'       => '24'
+            'label'       => '6'
         ],
         'ПРОФИЛ СОЗЛАМАЛАРИ',
         [

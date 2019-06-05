@@ -17,22 +17,25 @@
       <div class="row">
           <!-- small box -->
       <div class="box-body">
-        
-          <table id="example2" class="table table-bordered table-hover">
+          <table id="example2" class="table table-bordered table-hover" style="width:100%">
+          <div id="extra-buttons"></div>
             <thead>
             <tr>
-              <th>ID</th>
-              <th>Title</th>
-              <th>ComplaintType</th>
-              <th>Region</th>
-              <th>Neighorhood Citizen </th>
-              <th>Sender Name </th>
-              <th>Sender Email </th>
+              <th>Т/Р</th>
+              <th>Мавзу</th>
+              <th>Шикоят тури</th>
+              <th>Туман</th>
+              <th>МФЙ</th>
+              <th>ФИО</th>
+              <th>Почта</th>
+              <th>Телефон</th>
+              <th>Статус</th>
+              <th>Амаллар</th>
             </tr>
             </thead>
             <tbody>
             @foreach ($complaints as $complaint)
-            <tr>
+            <tr class="item{{$complaint->id}} @if(!$complaint->status) warning @endif ">
               <td>{{ $complaint->id }}</td>
               <td>{{ $complaint->title }}</td>
               <td>{{ $complaint->ComplaintType->name }}</td>
@@ -40,6 +43,16 @@
               <td>{{ $complaint->neighborhoodCitizen->name }}</td>
               <td>{{ $complaint->sender_full_name }}</td>
               <td>{{ $complaint->sender_email }}</td>
+              <td>{{ $complaint->sender_phone }}</td>
+              <td class="{{ $complaint->status ? 'text-green' : 'text-red' }}">{{ $complaint->status ? 'Хал бўлди' : 'Хал бўлмади' }}</td>
+              <td><button class="edit-modal btn btn-info"
+            data-info="{{$complaint->id}},{{$complaint->region_id}},{{$complaint->complaint_type_id}},{{$complaint->neighborhood_citizen_id}},{{$complaint->title}},{{$complaint->text}},{{$complaint->sender_full_name}},{{$complaint->sender_phone}},{{$complaint->sender_email}},{{$complaint->status}}">
+                <span class="glyphicon glyphicon-edit"></span>
+            </button>
+            <button class="delete-modal btn btn-danger" 
+            data-info="{{$complaint->id}},{{$complaint->region_id}},{{$complaint->complaint_type_id}},{{$complaint->neighborhood_citizen_id}},{{$complaint->title}},{{$complaint->text}},{{$complaint->sender_full_name}},{{$complaint->sender_phone}},{{$complaint->sender_email}},{{$complaint->status}}">
+                <span class="glyphicon glyphicon-trash"></span>
+            </button></td>
             </tr>
             @endforeach
             </tbody>

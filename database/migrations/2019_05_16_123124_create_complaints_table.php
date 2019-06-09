@@ -23,6 +23,7 @@ class CreateComplaintsTable extends Migration
             $table->string('sender_full_name')->nullable();
             $table->string('sender_phone')->nullable();
             $table->string('sender_email')->unique();
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

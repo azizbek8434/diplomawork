@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -15,6 +16,10 @@ class ComplaintType extends Model
         'status'
     ];
     
+    protected $appends = [
+        'complaintCount'
+    ];
+
     public function getRouteKeyName()
 	{
 		return 'slug';
@@ -23,6 +28,11 @@ class ComplaintType extends Model
     public function scopeParents(Builder $builder)
     {
         $builder->whereNull('parent_id');
+    }
+
+    public function scopeSubtypes(Builder $builder, $parent_id)
+    {
+        $builder->where('parent_id',$parent_id);
     }
 
     public function parent()
@@ -37,6 +47,25 @@ class ComplaintType extends Model
     
     public function complaints()
     {
+        
+        if(request()->route()->parameter('region')->id)
+            return $this->hasMany(Complaint::class)->where('region_id', request()->route()->parameter('region')->id);
+            
         return $this->hasMany(Complaint::class);
     }
+
+    public function childrenComplaints()
+    {
+        if(request()->route()->parameter('region')->id)
+            return $this->hasManyThrough(Complaint::class, ComplaintType::class, 'parent_id')->where('region_id', request()->route()->parameter('region')->id);
+        return $this->hasManyThrough(Complaint::class, ComplaintType::class, 'parent_id');
+    }
+
+    public function getComplaintCountAttribute()
+    {
+        if(request()->route()->parameter('region')->id)
+            return $this->complaints(request()->route()->parameter('region')->id)->count() + $this->childrenComplaints(request()->route()->parameter('region')->id)->count();
+        return 0;
+    }
+
 }

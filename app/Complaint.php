@@ -15,6 +15,7 @@ class Complaint extends Model
 	'sender_full_name',
 	'sender_phone',
 	'sender_email',
+	'status'
 	];
 	
 	public function region()

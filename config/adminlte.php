@@ -111,7 +111,7 @@ return [
         'АСОСИЙ НАВИГАЦИЯ',
         [
             'text' => 'Бош саҳифа',
-            'url'  => 'dashboard',
+            'url'  => 'dashboard/main',
             'icon' => 'tachometer',
             'can'  => 'default-list',
         ],

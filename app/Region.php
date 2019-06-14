@@ -25,5 +25,10 @@ class Region extends Model
     public function complaints()
     {
         return $this->hasMany(Complaint::class);
+    }
+    
+    public function neighboors()
+    {
+        return $this->hasMany(NeighborhoodCitizen::class);
 	}
 }

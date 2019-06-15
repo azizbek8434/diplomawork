@@ -19,6 +19,11 @@ Breadcrumbs::for('complaint.list', function ($trail, $region, $suptype, $subtype
     $trail->push($subtype->name, url('dashboard/'. $region->slug .'/'.$suptype->slug.'/'.$subtype->slug));
 });
 
+Breadcrumbs::for('complaint.create', function ($trail, $region) {
+    $trail->parent('content.suptype',$region);
+    $trail->push("Янги муаммо қўшиш", url('dashboard/add-complaint'));
+});
+
 
 // Dashboard > Users
 Breadcrumbs::for('users.index', function ($trail) {

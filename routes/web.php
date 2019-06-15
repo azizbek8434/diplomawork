@@ -19,12 +19,15 @@ Route::group([
     'prefix' => 'dashboard',
     'middleware' => 'auth'
 ], function() {
-    
-    Route::get('/', 'HomeController@index')->name('dashboard');
+    Route::redirect('/', '/dashboard/main');
+    Route::get('/main', 'HomeController@index')->name('dashboard');
+    Route::get('/add-complaint', 'ComplaintController@showComplaintForm')->name('add.complaint');
+    Route::post('/store-complaint', 'ComplaintController@store')->name('store.complaint');
     Route::group(['middleware' => ['role:Admin|Inspector|User']], function () {
         Route::resource('users','UserController');
         Route::resource('roles','RoleController');
         Route::resource('regions','RegionController');
+        Route::resource('complaints','ComplaintController');
         Route::resource('permissions','PermissionController');
         Route::get('profile','UserController@profile')->name('users.profile');
         Route::patch('profile/{id}','UserController@uprofile')->name('users.uprofile');

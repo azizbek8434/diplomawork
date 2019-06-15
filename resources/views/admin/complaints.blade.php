@@ -22,11 +22,11 @@
             <thead>
             <tr>
               <th>Т/Р</th>
-              <th>Мавзу</th>
-              <th>Шикоят тури</th>
               <th>Туман</th>
               <th>МФЙ</th>
               <th>ФИО</th>
+              <th>Шикоят тури</th>
+              <th>Мавзу</th>
               <th>Почта</th>
               <th>Телефон</th>
               <th>Статус</th>
@@ -37,11 +37,11 @@
             @foreach ($complaints as $complaint)
             <tr class="item{{$complaint->id}} @if(!$complaint->status) warning @endif ">
               <td>{{ $complaint->id }}</td>
-              <td>{{ $complaint->title }}</td>
-              <td>{{ $complaint->ComplaintType->name }}</td>
               <td>{{ $complaint->region->name }}</td>
               <td>{{ $complaint->neighborhoodCitizen->name }}</td>
               <td>{{ $complaint->sender_full_name }}</td>
+              <td>{{ $complaint->ComplaintType->name }}</td>
+              <td>{{ $complaint->title }}</td>
               <td>{{ $complaint->sender_email }}</td>
               <td>{{ $complaint->sender_phone }}</td>
               <td class="{{ $complaint->status ? 'text-green' : 'text-red' }}">{{ $complaint->status ? 'Хал бўлди' : 'Хал бўлмади' }}</td>

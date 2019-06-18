@@ -11,7 +11,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable, HasRoles,UserPermissions;
-    protected $with = ['roles'];
+    protected $with = ['roles','region'];
     protected $appends = ['can',  'binded_role'];
     protected $fillable = ['name', 'email', 'password','region_id'];
 

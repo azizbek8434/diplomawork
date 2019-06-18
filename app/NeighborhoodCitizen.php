@@ -10,4 +10,9 @@ class NeighborhoodCitizen extends Model
     {
         return $this->hasMany(Complaint::class);
     }
+
+    public function region()
+    {
+        return $this->belongsTo(Region::class);
+    }
 }

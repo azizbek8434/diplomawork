@@ -57,6 +57,9 @@
                 <div class="navbar-custom-menu">
 
                     <ul class="nav navbar-nav">
+                        <li class="complaint-add">
+                            <a href="{{ route('add.complaint') }}" class="text-green"><i class="fa fa-plus">&nbsp;</i>Qo'shish</a>
+                        </li>
                         <li>
                             @if(config('adminlte.logout_method') == 'GET' || !config('adminlte.logout_method') && version_compare(\Illuminate\Foundation\Application::VERSION, '5.3.0', '<'))
                                 <a href="{{ url(config('adminlte.logout_url', 'auth/logout')) }}">

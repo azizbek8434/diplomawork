@@ -11,10 +11,8 @@
 */
 
 Auth::routes();
-Route::get('/', function(){
-    return view('front.layouts.master');
-});
-
+Route::get('/', 'WelcomeController@index')->name('welcome');
+Route::post('/message/store', 'WelcomeController@message')->name('message.store');
 Route::group([
     'prefix' => 'dashboard',
     'middleware' => 'auth'

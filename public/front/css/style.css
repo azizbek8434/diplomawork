@@ -229,25 +229,29 @@ h6 {
 }
 
 #intro .carousel-content {
-    margin-top: 120px;
+    position: relative;
+    top: 150px;
     text-align: center;
 }
 
 #intro h2 {
     color: #fff;
     margin-bottom: 30px;
-    font-size: 48px;
+    font-size: 38px;
     font-weight: 700;
 }
 
 #intro p {
     width: 80%;
+    padding: 10px;
+    font-size: 24px;
+    background-color: rgb(0, 0, 0, 0.09);
     margin: 0 auto 30px auto;
     color: #fff;
 }
 
 #intro p span {
-    color: #ffffffcc;
+    color: #fff;
     padding-top: 10px;
 }
 
@@ -654,14 +658,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* About Us Section
 --------------------------------*/
 
-#about {
+#news {
     background: url("../img/about-bg.jpg") center top no-repeat fixed;
     background-size: cover;
     padding: 60px 0 40px 0;
     position: relative;
 }
 
-#about::before {
+#news::before {
     content: '';
     position: absolute;
     left: 0;
@@ -672,27 +676,27 @@ body.mobile-nav-active #mobile-nav-toggle {
     z-index: 9;
 }
 
-#about .container {
+#news .container {
     position: relative;
     z-index: 10;
 }
 
-#about .about-col {
+#news .about-col {
     background: #fff;
     border-radius: 0 0 4px 4px;
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
 }
 
-#about .about-col .img {
+#news .about-col .img {
     position: relative;
 }
 
-#about .about-col .img img {
+#news .about-col .img img {
     border-radius: 4px 4px 0 0;
 }
 
-#about .about-col .icon {
+#news .about-col .icon {
     width: 64px;
     height: 64px;
     padding-top: 8px;
@@ -707,22 +711,22 @@ body.mobile-nav-active #mobile-nav-toggle {
     transition: 0.3s;
 }
 
-#about .about-col i {
+#news .about-col i {
     font-size: 36px;
     line-height: 1;
     color: #fff;
     transition: 0.3s;
 }
 
-#about .about-col:hover .icon {
+#news .about-col:hover .icon {
     background-color: #fff;
 }
 
-#about .about-col:hover i {
+#news .about-col:hover i {
     color: #18d26e;
 }
 
-#about .about-col h2 {
+#news .about-col h2 {
     color: #000;
     text-align: center;
     font-weight: 700;
@@ -731,15 +735,15 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin: 40px 0 12px 0;
 }
 
-#about .about-col h2 a {
+#news .about-col h2 a {
     color: #000;
 }
 
-#about .about-col h2 a:hover {
+#news .about-col h2 a:hover {
     color: #18d26e;
 }
 
-#about .about-col p {
+#news .about-col p {
     font-size: 14px;
     line-height: 24px;
     color: #333;
@@ -812,6 +816,14 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #fff;
 }
 
+#call-to-action .cta-input {
+    font-family: "Montserrat", sans-serif;
+    padding: 8px 28px;
+    letter-spacing: 1px;
+    display: inline-block;
+    border: 2px solid #fff;
+}
+
 #call-to-action .cta-btn {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
@@ -820,16 +832,17 @@ body.mobile-nav-active #mobile-nav-toggle {
     letter-spacing: 1px;
     display: inline-block;
     padding: 8px 28px;
-    border-radius: 25px;
     transition: 0.5s;
     margin-top: 10px;
-    border: 2px solid #fff;
-    color: #fff;
+    color: rgb(255, 255, 255, 0.7);
+    border: 2px solid rgb(255, 255, 255, 0.7);
+    background: rgb(24, 210, 110, 0.5);
 }
 
 #call-to-action .cta-btn:hover {
-    background: #18d26e;
+    background: rgb(24, 210, 110);
     border: 2px solid #18d26e;
+    color: #fff;
 }
 
 /* Call To Action Section

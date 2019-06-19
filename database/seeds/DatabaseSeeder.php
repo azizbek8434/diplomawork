@@ -18,6 +18,9 @@ class DatabaseSeeder extends Seeder
         $this->call(ComplaintTypeTableSeeder::class);
         $this->call(NeighborhoodCitizensTableSeeder::class);
         $this->call(ComplaintTableSeeder::class);
+        $this->call(LinksTableSeeder::class);
+        $this->call(SliderTableSeeder::class);
+        $this->call(PostsTableSeeder::class);
         
     }
 }

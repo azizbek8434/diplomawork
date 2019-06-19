@@ -18,76 +18,32 @@
                 <ol class="carousel-indicators"></ol>
 
                 <div class="carousel-inner" role="listbox">
-
-                    <div class="carousel-item active">
-                        <div class="carousel-background"><img src="{{ asset('front/img/intro-carousel/1.jpg')}}" alt="">
+                    @foreach($sliders as $slider)
+                    <div class="carousel-item {{ $loop->first ?  'active' : ''}}">
+                        <div class="carousel-background"><img
+                                src="{{ asset('front/img/intro-carousel/'.$slider->image )}}"
+                                alt="{{ $slider->title }}">
                         </div>
                         <div class="carousel-container">
                             <div class="carousel-content">
-                                {{-- <h2>Халқимиз ҳамма нарсадан устун қўядиган адолат туйғусини хаётимизда том маънода қарор топтириш - энг асосий вазифамизга айланиши шарт.</h2> --}}
-                                <p>Халқимиз ҳамма нарсадан устун қўядиган адолат туйғусини хаётимизда том маънода қарор топтириш - энг асосий вазифамизга айланиши шарт </br>
-                                <span class="author pull-right">Шавкат Мирзиёев</span></p>
-                                {{-- <a href="#featured-services" class="btn-get-started scrollto">Шавкат Мирзиёев</a> --}}
+                                @if($slider->title)
+                                <h2>{{ $slider->title }}</h2>
+                                @endif
+
+                                @if($slider->content)
+                                <p>{{ $slider->content }}
+                                    @if($slider->author)
+                                    </br><span class="author pull-right">{{ $slider->author }}</span>
+                                    @endif
+                                </p>
+                                @endif
+                                @if($slider->url)
+                                <a href="{{ $slider->url }}" class="btn-get-started scrollto">Батафсил</a>
+                                @endif
                             </div>
                         </div>
                     </div>
-
-                    <div class="carousel-item">
-                        <div class="carousel-background"><img src="{{ asset('front/img/intro-carousel/2.jpg')}}" alt="">
-                        </div>
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2>At vero eos et accusamus</h2>
-                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-                                    minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis
-                                    dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
-                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="carousel-background"><img src="{{ asset('front/img/intro-carousel/3.jpg')}}" alt="">
-                        </div>
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2>Temporibus autem quibusdam</h2>
-                                <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                                    voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
-                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="carousel-background"><img src="{{ asset('front/img/intro-carousel/4.jpg')}}" alt="">
-                        </div>
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2>Nam libero tempore</h2>
-                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-                                    magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum.</p>
-                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="carousel-background"><img src="{{ asset('front/img/intro-carousel/5.jpg')}}" alt="">
-                        </div>
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2>Magnam aliquam quaerat</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
 
                 <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
@@ -104,44 +60,11 @@
         </div>
     </section><!-- #intro -->
     <main id="main">
-        <!--========================== Featured Services Section ============================-->
-        <section id="featured-services">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-4 box">
-                        <i class="ion-ios-bookmarks-outline"></i>
-                        <h4 class="title"><a href="">Lorem Ipsum Delino</a></h4>
-                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                            excepturi sint occaecati cupiditate non provident</p>
-                    </div>
-
-                    <div class="col-lg-4 box box-bg">
-                        <i class="ion-ios-stopwatch-outline"></i>
-                        <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                        <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat tarad limino ata</p>
-                    </div>
-
-                    <div class="col-lg-4 box">
-                        <i class="ion-ios-heart-outline"></i>
-                        <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                            dolore eu fugiat nulla pariatur</p>
-                    </div>
-
-                </div>
-            </div>
-        </section><!-- #featured-services -->
-
         <!--========================== About Us Section ============================-->
-        <section id="about">
+        <section id="news">
             <div class="container">
                 <header class="section-header">
-                    <h3>About Us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h3>Сўнгги Янгиликлар</h3>
                 </header>
                 <div class="row about-cols">
                     <div class="col-md-4 wow fadeInUp">
@@ -193,10 +116,7 @@
         <section id="services">
             <div class="container">
                 <header class="section-header wow fadeInUp">
-                    <h3>Services</h3>
-                    <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant
-                        vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta
-                        zanos paradigno tridexa panatarel.</p>
+                    <h3>Интерактив Хизматлар</h3>
                 </header>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
@@ -241,50 +161,16 @@
         <!--========================== Call To Action Section ============================-->
         <section id="call-to-action" class="wow fadeIn">
             <div class="container text-center">
-                <h3>Call To Action</h3>
-                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                    anim id est laborum.</p>
-                <a class="cta-btn" href="#">Call To Action</a>
+                <h3>Бизнинг хабарномамиз</h3>
+                <p> Ўзбекистон Республикаси Бош Прокуратураси томонидан олиб борилаётган ишлар ва янгиликлардан ҳабардор
+                    бўлиб туриш учун э-почта манзилингизни қолдиринг.</p>
+                <form action="/subscribe" method="post">
+                    {{ csrf_field() }}
+                    <input type="email" name="email" class="cta-input" style="width: 300px;" placeholder="E-mail">
+                    <input type="submit" value="Хабар жўнатиш" class="cta-btn">
+                </form>
             </div>
         </section><!-- #call-to-action -->
-        <!--========================== Skills Section ============================-->
-        <section id="skills">
-            <div class="container">
-                <header class="section-header">
-                    <h3>Our Skills</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip</p>
-                </header>
-                <div class="skills-content">
-                    <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <span class="skill">HTML <i class="val">100%</i></span>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <span class="skill">CSS <i class="val">90%</i></span>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <span class="skill">JavaScript <i class="val">75%</i></span>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <span class="skill">Photoshop <i class="val">55%</i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!--========================== Facts Section ============================-->
         <section id="facts" class="wow fadeIn">
             <div class="container">
@@ -309,9 +195,6 @@
                         <span data-toggle="counter-up">18</span>
                         <p>Инспекторлар</p>
                     </div>
-                </div>
-                <div class="facts-img">
-                    <img src="{{ asset('front/img/facts-img.png')}}" alt="" class="img-fluid">
                 </div>
             </div>
         </section><!-- #facts -->
@@ -479,97 +362,11 @@
                 </div>
             </div>
         </section><!-- #portfolio -->
-        <!--========================== Clients Section ============================-->
-        <section id="clients" class="wow fadeInUp">
-            <div class="container">
-                <header class="section-header">
-                    <h3>Our Clients</h3>
-                </header>
-                <div class="owl-carousel clients-carousel">
-                    <img src="{{ asset('front/img/clients/client-1.png')}}" alt="">
-                    <img src="{{ asset('front/img/clients/client-2.png')}}" alt="">
-                    <img src="{{ asset('front/img/clients/client-3.png')}}" alt="">
-                    <img src="{{ asset('front/img/clients/client-4.png')}}" alt="">
-                    <img src="{{ asset('front/img/clients/client-5.png')}}" alt="">
-                    <img src="{{ asset('front/img/clients/client-6.png')}}" alt="">
-                    <img src="{{ asset('front/img/clients/client-7.png')}}" alt="">
-                    <img src="{{ asset('front/img/clients/client-8.png')}}" alt="">
-                </div>
-            </div>
-        </section><!-- #clients -->
-        <!--========================== Clients Section ============================-->
-        <section id="testimonials" class="section-bg wow fadeInUp">
-            <div class="container">
-                <header class="section-header">
-                    <h3>Testimonials</h3>
-                </header>
-                <div class="owl-carousel testimonials-carousel">
-                    <div class="testimonial-item">
-                        <img src="{{ asset('front/img/testimonial-1.jpg')}}" class="testimonial-img" alt="">
-                        <h3>Saul Goodman</h3>
-                        <h4>Ceo &amp; Founder</h4>
-                        <p>
-                            <img src="{{ asset('front/img/quote-sign-left.png')}}" class="quote-sign-left" alt="">
-                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                            Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                            <img src="{{ asset('front/img/quote-sign-right.png')}}" class="quote-sign-right" alt="">
-                        </p>
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="{{ asset('front/img/testimonial-2.jpg')}}" class="testimonial-img" alt="">
-                        <h3>Sara Wilsson</h3>
-                        <h4>Designer</h4>
-                        <p>
-                            <img src="{{ asset('front/img/quote-sign-left.png')}}" class="quote-sign-left" alt="">
-                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum
-                            eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim
-                            culpa.
-                            <img src="{{ asset('front/img/quote-sign-right.png')}}" class="quote-sign-right" alt="">
-                        </p>
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="{{ asset('front/img/testimonial-3.jpg')}}" class="testimonial-img" alt="">
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
-                        <p>
-                            <img src="{{ asset('front/img/quote-sign-left.png')}}" class="quote-sign-left" alt="">
-                            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
-                            minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                            <img src="{{ asset('front/img/quote-sign-right.png')}}" class="quote-sign-right" alt="">
-                        </p>
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="{{ asset('front/img/testimonial-4.jpg')}}" class="testimonial-img" alt="">
-                        <h3>Matt Brandon</h3>
-                        <h4>Freelancer</h4>
-                        <p>
-                            <img src="{{ asset('front/img/quote-sign-left.png')}}" class="quote-sign-left" alt="">
-                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim
-                            velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum
-                            veniam.
-                            <img src="{{ asset('front/img/quote-sign-right.png')}}" class="quote-sign-right" alt="">
-                        </p>
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="{{ asset('front/img/testimonial-5.jpg')}}" class="testimonial-img" alt="">
-                        <h3>John Larson</h3>
-                        <h4>Entrepreneur</h4>
-                        <p>
-                            <img src="{{ asset('front/img/quote-sign-left.png')}}" class="quote-sign-left" alt="">
-                            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam
-                            enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore
-                            nisi cillum quid.
-                            <img src="{{ asset('front/img/quote-sign-right.png')}}" class="quote-sign-right" alt="">
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section><!-- #testimonials -->
         <!--========================== Team Section ============================-->
         <section id="team">
             <div class="container">
                 <div class="section-header wow fadeInUp">
-                    <h3>Team</h3>
+                    <h3>Инспекторлар</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
                 </div>
                 <div class="row">
@@ -580,12 +377,12 @@
                                 <div class="member-info-content">
                                     <h4>Walter White</h4>
                                     <span>Chief Executive Officer</span>
-                                    <div class="social">
+                                    {{-- <div class="social">
                                         <a href=""><i class="fa fa-twitter"></i></a>
                                         <a href=""><i class="fa fa-facebook"></i></a>
                                         <a href=""><i class="fa fa-google-plus"></i></a>
                                         <a href=""><i class="fa fa-linkedin"></i></a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -677,7 +474,8 @@
                 <div class="form">
                     <div id="sendmessage">Хабарингиз жўнатилди. Раҳмат!</div>
                     <div id="errormessage"></div>
-                    <form action="" method="post" role="form" class="contactForm">
+                    <form action="{{ route('message.store') }}" method="post" role="form" class="contactForm">
+                    {{ csrf_field() }}
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <input type="text" name="name" class="form-control" id="name"
@@ -706,6 +504,21 @@
                 </div>
             </div>
         </section><!-- #contact -->
+        <!--========================== Clients Section ============================-->
+        <section id="clients" class="wow fadeInUp">
+            <div class="container">
+                <header class="section-header">
+                    <h3>Фойдали Ҳаволалар</h3>
+                </header>
+                <div class="owl-carousel clients-carousel">
+                    @foreach ($links as $link)
+                    <a href="{{ $link->url }}" target="_blank">
+                        <img src="/front/img/clients/{{ $link->image }}" alt="{{ $link->title }}">
+                    </a>
+                    @endforeach
+                </div>
+            </div>
+        </section><!-- #clients -->
     </main>
     <!--========================== Footer ============================-->
     <footer id="footer">
@@ -717,10 +530,11 @@
     <script>
         $(document).ready(function () {
             $("#demo-calendar").simpleCalendar({
-                months: ['январ', 'феврал', 'март', 'апрел', 'май', 'июн', 'июл', 'август', 'сентябр', 'октябр'],
+                months: ['январ', 'феврал', 'март', 'апрел', 'май', 'июн', 'июл', 'август', 'сентябр',
+                    'октябр'
+                ],
                 days: ['як', 'ду', 'се', 'чор', 'пай', 'жу', 'шан'],
             });
-
             tippy('.day.event', {
                 theme: 'translucent',
             });

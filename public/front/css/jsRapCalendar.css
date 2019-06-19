@@ -1,0 +1,81 @@
+.rapCalendar {
+    margin: 8px;
+    padding: 8px;
+    background-color: transparent;
+    color: #ffe;
+    padding: 8px;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+}
+
+.rapCalendar table {
+    margin: 0px auto;
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+
+.rapCalendar caption {
+    color: #18d26e;
+    font-weight: bold;
+}
+
+.rapCalendar thead {
+    color: #18d26e;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+.rapCalendar tbody td {
+    text-align: center;
+    border: 1px solid transparent;
+    width: 34px;
+    height: 24px;
+}
+
+.rapCalendar .calDisable {
+    color: #ccc;
+}
+
+.rapCalendar .calSelectable:hover {
+    border-color: black;
+    background-color: #18d26e;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.rapCalendar .calSelected {
+    border-color: black;
+    background-color: #18d26e;
+    border-radius: 8px;
+    font-weight: bold;
+    text-shadow: 0px 0px 4px black;
+}
+
+.rapCalendar .larr {
+    color: #18d26e;
+    cursor: pointer;
+    float: left;
+}
+
+.rapCalendar .larr:before {
+    content: "◄";
+}
+
+.rapCalendar .larr:hover {
+    color: white;
+}
+
+.rapCalendar .rarr {
+    color: #18d26e;
+    cursor: pointer;
+    float: right;
+}
+
+.rapCalendar .rarr:before {
+    content: "►";
+}
+
+.rapCalendar .rarr:hover {
+    color: white;
+}

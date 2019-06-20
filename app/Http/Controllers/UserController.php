@@ -14,7 +14,7 @@ class UserController extends Controller
     function __construct()
     {
         $this->middleware('permission:user-list', ['except' => ['profile','uprofile']]);
-        // $this->middleware('permission:default-list', ['only' => ['uprofile','profile']]);
+        $this->middleware('permission:farg-ona-tumani');
     }
     
     /**
@@ -92,7 +92,7 @@ class UserController extends Controller
     {
         $user = User::with('region')->findOrFail($id);
         $regions = Region::pluck('name','id')->all();
-        $userRegion = $user->region()->pluck('name','id')->all();
+        $userRegion = $user->region()->pluck('id')->all();
         $roles = Role::pluck('name','name')->all();
         $userRole = $user->roles->pluck('name','name')->all();
         return view('admin.users.edit', compact('user', 'roles', 'userRole','regions', 'userRegion'));
@@ -116,6 +116,8 @@ class UserController extends Controller
             'roles' => 'required'
         ]);
         $input = $request->all();
+       
+        
         if(!empty($input['password'])){
             $input['password'] = Hash::make($input['password']);
         }else{
@@ -125,8 +127,8 @@ class UserController extends Controller
         $user->update($input);
         DB::table('model_has_roles')->where('model_id', $id)->delete();
         $user->assignRole($request->input('roles'));
-        $permission = $user->region->slug;
-        $user->givePermissionTo($permission);
+        $permission = Region::find($request->input('region_id'))->slug;
+        $user->syncPermissions($permission);
         return redirect()->route('users.index')
         ->with('success', 'Фойдаланувчи муваффақиятли янгиланди.');
     }

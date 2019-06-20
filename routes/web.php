@@ -27,6 +27,8 @@ Route::group([
         Route::resource('regions','RegionController');
         Route::resource('complaints','ComplaintController');
         Route::resource('permissions','PermissionController');
+        Route::post('/getneighborhood','ComplaintController@getneighborhood');
+        Route::post('/getsubtype','ComplaintController@getsubtype');
         Route::get('profile','UserController@profile')->name('users.profile');
         Route::patch('profile/{id}','UserController@uprofile')->name('users.uprofile');
         Route::get('/{region}','HomeController@region')->name('content.region');

@@ -19,8 +19,13 @@ Breadcrumbs::for('complaint.list', function ($trail, $region, $suptype, $subtype
     $trail->push($subtype->name, url('dashboard/'. $region->slug .'/'.$suptype->slug.'/'.$subtype->slug));
 });
 
-Breadcrumbs::for('complaint.create', function ($trail, $region) {
-    $trail->parent('content.suptype',$region);
+Breadcrumbs::for('complaint.list.all', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Барча муаммолар ройҳати', url('dashboard/complaints'));
+});
+
+Breadcrumbs::for('complaint.create', function ($trail) {
+    $trail->parent('dashboard');
     $trail->push("Янги муаммо қўшиш", url('dashboard/add-complaint'));
 });
 

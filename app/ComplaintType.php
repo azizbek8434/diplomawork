@@ -30,9 +30,9 @@ class ComplaintType extends Model
         $builder->whereNull('parent_id');
     }
 
-    public function scopeSubtypes(Builder $builder, $parent_id)
+    public function scopeSubtypes($query, $parent_id)
     {
-        $builder->where('parent_id',$parent_id);
+        $query->where('parent_id',$parent_id);
     }
 
     public function parent()

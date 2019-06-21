@@ -8,14 +8,14 @@
                </div>
 
                <div class="col-lg-3 col-md-6 footer-links">
-                   <h4>Фойдали ҳаволалар</h4>
-                   <ul>
-                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Асосий</a></li>
-                       <li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
-                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
-                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
-                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
-                   </ul>
+                    <h4>Foydali havolalar</h4>
+                    <ul>
+                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Asosiy</a></li>
+                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Biz haqimizda</a></li>
+                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Hizmatlarimiz</a></li>
+                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Statistika</a></li>
+                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Biz bilan aloqa</a></li>
+                    </ul>
                </div>
 
                <div class="col-lg-3 col-md-6 footer-contact">

@@ -27,7 +27,7 @@
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="#" class="small-box-footer">Тулик малумот<i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ url('dashboard/complaints') }}" class="small-box-footer">Тулик малумот<i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

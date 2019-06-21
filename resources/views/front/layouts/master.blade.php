@@ -61,10 +61,12 @@
     </section><!-- #intro -->
     <main id="main">
         <!--========================== About Us Section ============================-->
-        <section id="news">
+        <section id="about">
             <div class="container">
                 <header class="section-header">
-                    <h3>Сўнгги Янгиликлар</h3>
+                    <h3>Biz haqimizda</h3>
+                    <p>Biz sizlarga hizmat ko'rsatishdan shodmiz. Biz aholining muammolarini o'rganish ularni hal qilish 
+                    yo'llarini qidirmoqdamiz. Bizning guruh ko'plab muammolarning umumiy yechimlarini izlamoqda.</p>
                 </header>
                 <div class="row about-cols">
                     <div class="col-md-4 wow fadeInUp">
@@ -73,11 +75,10 @@
                                 <img src="{{ asset('front/img/about-mission.jpg')}}" alt="" class="img-fluid">
                                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
                             </div>
-                            <h2 class="title"><a href="#">Our Mission</a></h2>
+                            <h2 class="title"><a href="#">Bizning vazifamiz</a></h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat.
+                                Bizning vazifamiz xalq bilan muloqotda bo'lish. Ularning muammolarni yig'ish. Bu muammolarni
+                                o'rganilib chiqish. Ularni hal qilishdan iborat.
                             </p>
                         </div>
                     </div>
@@ -87,11 +88,10 @@
                                 <img src="{{ asset('front/img/about-plan.jpg')}}" alt="" class="img-fluid">
                                 <div class="icon"><i class="ion-ios-list-outline"></i></div>
                             </div>
-                            <h2 class="title"><a href="#">Our Plan</a></h2>
+                            <h2 class="title"><a href="#">Bizning maqsadimiz</a></h2>
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium,
-                                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                                beatae vitae dicta sunt explicabo.
+                                Aholining ijtimoiy muammolarini o'rganib ularni hal qilish. Xalqning og'irini yengil qilishdir.
+                                Aholining talab va istaklarini qondirish. Ijtimoiy yordamga muhtojlarga yordam berish. 
                             </p>
                         </div>
                     </div>
@@ -101,11 +101,10 @@
                                 <img src="{{ asset('front/img/about-vision.jpg')}}" alt="" class="img-fluid">
                                 <div class="icon"><i class="ion-ios-eye-outline"></i></div>
                             </div>
-                            <h2 class="title"><a href="#">Our Vision</a></h2>
+                            <h2 class="title"><a href="#">Biz ko'ramiz</a></h2>
                             <p>
-                                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores
-                                eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum
-                                quia dolor sit amet.
+                                Bizga yuborilgan har bitta fikr mulohaza biz uchun ahamiyatli. Bizga sizning fikrlaringiz qiziq.
+                                Biz bu fikrlarni inobatga olishga harakat qilamiz. 
                             </p>
                         </div>
                     </div>
@@ -116,44 +115,45 @@
         <section id="services">
             <div class="container">
                 <header class="section-header wow fadeInUp">
-                    <h3>Интерактив Хизматлар</h3>
+                    <h3>HIZMATLARIMIZ</h3>
+                    <p>O'zbekiston Respublikasi Farg'ona viloyati bosh prokuraturasi sizga o'z hizmatlarini taklif etadi.</p>
                 </header>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
                         <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-                        <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                            excepturi sint occaecati cupiditate non provident</p>
+                        <h4 class="title"><a href="">Jinoyatchilikni oldini olish</a></h4>
+                        <p class="description">Aholi orasida jinoyatchilikka qarshi kurashish shiori asosida birlashib bunga qarshi 
+                        kurashish</p>
                     </div>
                     <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
                         <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
-                        <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                        <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat tarad limino ata</p>
+                        <h4 class="title"><a href="">Xalq muammolari</a></h4>
+                        <p class="description">Xalqning muammolarini yig'ish. Ularni to'plash ular uchun umumiy yechimni topish.
+                        </p>
                     </div>
                     <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
                         <div class="icon"><i class="ion-ios-paper-outline"></i></div>
-                        <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                            dolore eu fugiat nulla pariatur</p>
+                        <h4 class="title"><a href="">Onlayn qabul</a></h4>
+                        <p class="description">Tadbirkorlar uchun qulaylik tug'dirish maqsadida onlayn murojatlarni qabul qilish.
+                        Ularni fikr mulohazalarini o'rganish.</p>
                     </div>
                     <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
                         <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                        <h4 class="title"><a href="">Magni Dolores</a></h4>
-                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum</p>
+                        <h4 class="title"><a href="">Ish bilan taminlash</a></h4>
+                        <p class="description">Ishga layoqatli odamlarni bo'sh ish o'rinlari bilan taminlash.
+                        Ularga kerakli bo'lgan ijtimoiy yordam ko'rsatish.</p>
                     </div>
                     <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
                         <div class="icon"><i class="ion-ios-barcode-outline"></i></div>
-                        <h4 class="title"><a href="">Nemo Enim</a></h4>
-                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                            praesentium voluptatum deleniti atque</p>
+                        <h4 class="title"><a href="">Murojaatlar statistikasi</a></h4>
+                        <p class="description">Bizga kelib tushgan murojatlarni statistik ko'rinishini
+                        shakllantirish. Ularni shaffoflik orqali xalq bilan tanishtirish</p>
                     </div>
                     <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
                         <div class="icon"><i class="ion-ios-people-outline"></i></div>
-                        <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                        <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                            tempore, cum soluta nobis est eligendi</p>
+                        <h4 class="title"><a href="">Ijtimoiy himoya</a></h4>
+                        <p class="description">Ijtimoiy himoyaga muhtoj insonlar uchun yordam ko'rsatish 
+                        ularni muammolarini hal qilish.</p>
                     </div>
                 </div>
             </div>
@@ -175,277 +175,34 @@
         <section id="facts" class="wow fadeIn">
             <div class="container">
                 <header class="section-header">
-                    <h3>Мурожаатлар статистикаси</h3>
-                    <p>Сайт орқали шикоятлар бўйича статистика</p>
+                    <h3>Murojaatlar statistikasi</h3>
+                    <p>Sayt orqali shikoyatlar bo'yicha statistika</p>
                 </header>
                 <div class="row counters">
                     <div class="col-lg-3 col-6 text-center">
                         <span data-toggle="counter-up">274</span>
-                        <p>Фуқоролар</p>
+                        <p>Fuqarolar</p>
                     </div>
                     <div class="col-lg-3 col-6 text-center">
                         <span data-toggle="counter-up">421</span>
-                        <p>Шикоятлар</p>
+                        <p>SHikoyatlar</p>
                     </div>
                     <div class="col-lg-3 col-6 text-center">
                         <span data-toggle="counter-up">1,364</span>
-                        <p>Ёрдам вақти</p>
+                        <p>Yordam vaqti</p>
                     </div>
                     <div class="col-lg-3 col-6 text-center">
                         <span data-toggle="counter-up">18</span>
-                        <p>Инспекторлар</p>
+                        <p>Inspektorlar</p>
                     </div>
                 </div>
             </div>
         </section><!-- #facts -->
-        <!--========================== Portfolio Section ============================-->
-        <section id="portfolio" class="section-bg">
-            <div class="container">
-                <header class="section-header">
-                    <h3 class="section-title">Our Portfolio</h3>
-                </header>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
-                            <li data-filter=".filter-web">Web</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row portfolio-container">
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="{{ asset('front/img/portfolio/app1.jpg')}}" class="img-fluid" alt="">
-                                <a href="{{ asset('front/img/portfolio/app1.jpg')}}" data-lightbox="portfolio"
-                                    data-title="App 1" class="link-preview" title="Preview"><i
-                                        class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i
-                                        class="ion ion-android-open"></i></a>
-                            </figure>
-                            <div class="portfolio-info">
-                                <h4><a href="#">App 1</a></h4>
-                                <p>App</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="{{ asset('front/img/portfolio/web3.jpg')}}" class="img-fluid" alt="">
-                                <a href="{{ asset('front/img/portfolio/web3.jpg')}}" class="link-preview"
-                                    data-lightbox="portfolio" data-title="Web 3" title="Preview"><i
-                                        class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i
-                                        class="ion ion-android-open"></i></a>
-                            </figure>
-                            <div class="portfolio-info">
-                                <h4><a href="#">Web 3</a></h4>
-                                <p>Web</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="{{ asset('front/img/portfolio/app2.jpg')}}" class="img-fluid" alt="">
-                                <a href="{{ asset('front/img/portfolio/app2.jpg')}}" class="link-preview"
-                                    data-lightbox="portfolio" data-title="App 2" title="Preview"><i
-                                        class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i
-                                        class="ion ion-android-open"></i></a>
-                            </figure>
-                            <div class="portfolio-info">
-                                <h4><a href="#">App 2</a></h4>
-                                <p>App</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="{{ asset('front/img/portfolio/card2.jpg')}}" class="img-fluid" alt="">
-                                <a href="{{ asset('front/img/portfolio/card2.jpg')}}" class="link-preview"
-                                    data-lightbox="portfolio" data-title="Card 2" title="Preview"><i
-                                        class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i
-                                        class="ion ion-android-open"></i></a>
-                            </figure>
-                            <div class="portfolio-info">
-                                <h4><a href="#">Card 2</a></h4>
-                                <p>Card</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="{{ asset('front/img/portfolio/web2.jpg')}}" class="img-fluid" alt="">
-                                <a href="{{ asset('front/img/portfolio/web2.jpg')}}" class="link-preview"
-                                    data-lightbox="portfolio" data-title="Web 2" title="Preview"><i
-                                        class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i
-                                        class="ion ion-android-open"></i></a>
-                            </figure>
-                            <div class="portfolio-info">
-                                <h4><a href="#">Web 2</a></h4>
-                                <p>Web</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="{{ asset('front/img/portfolio/app3.jpg')}}" class="img-fluid" alt="">
-                                <a href="{{ asset('front/img/portfolio/app3.jpg')}}" class="link-preview"
-                                    data-lightbox="portfolio" data-title="App 3" title="Preview"><i
-                                        class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i
-                                        class="ion ion-android-open"></i></a>
-                            </figure>
-                            <div class="portfolio-info">
-                                <h4><a href="#">App 3</a></h4>
-                                <p>App</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="{{ asset('front/img/portfolio/card1.jpg')}}" class="img-fluid" alt="">
-                                <a href="{{ asset('front/img/portfolio/card1.jpg')}}" class="link-preview"
-                                    data-lightbox="portfolio" data-title="Card 1" title="Preview"><i
-                                        class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i
-                                        class="ion ion-android-open"></i></a>
-                            </figure>
-                            <div class="portfolio-info">
-                                <h4><a href="#">Card 1</a></h4>
-                                <p>Card</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="{{ asset('front/img/portfolio/card3.jpg')}}" class="img-fluid" alt="">
-                                <a href="{{ asset('front/img/portfolio/card3.jpg')}}" class="link-preview"
-                                    data-lightbox="portfolio" data-title="Card 3" title="Preview"><i
-                                        class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i
-                                        class="ion ion-android-open"></i></a>
-                            </figure>
-                            <div class="portfolio-info">
-                                <h4><a href="#">Card 3</a></h4>
-                                <p>Card</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="{{ asset('front/img/portfolio/web1.jpg')}}" class="img-fluid" alt="">
-                                <a href="{{ asset('front/img/portfolio/web1.jpg')}}" class="link-preview"
-                                    data-lightbox="portfolio" data-title="Web 1" title="Preview"><i
-                                        class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i
-                                        class="ion ion-android-open"></i></a>
-                            </figure>
-                            <div class="portfolio-info">
-                                <h4><a href="#">Web 1</a></h4>
-                                <p>Web</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- #portfolio -->
-        <!--========================== Team Section ============================-->
-        <section id="team">
-            <div class="container">
-                <div class="section-header wow fadeInUp">
-                    <h3>Инспекторлар</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp">
-                        <div class="member">
-                            <img src="{{ asset('front/img/team-1.jpg')}}" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>Walter White</h4>
-                                    <span>Chief Executive Officer</span>
-                                    {{-- <div class="social">
-                                        <a href=""><i class="fa fa-twitter"></i></a>
-                                        <a href=""><i class="fa fa-facebook"></i></a>
-                                        <a href=""><i class="fa fa-google-plus"></i></a>
-                                        <a href=""><i class="fa fa-linkedin"></i></a>
-                                    </div> --}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="member">
-                            <img src="{{ asset('front/img/team-2.jpg')}}" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>Sarah Jhonson</h4>
-                                    <span>Product Manager</span>
-                                    <div class="social">
-                                        <a href=""><i class="fa fa-twitter"></i></a>
-                                        <a href=""><i class="fa fa-facebook"></i></a>
-                                        <a href=""><i class="fa fa-google-plus"></i></a>
-                                        <a href=""><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="member">
-                            <img src="{{ asset('front/img/team-3.jpg')}}" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>William Anderson</h4>
-                                    <span>CTO</span>
-                                    <div class="social">
-                                        <a href=""><i class="fa fa-twitter"></i></a>
-                                        <a href=""><i class="fa fa-facebook"></i></a>
-                                        <a href=""><i class="fa fa-google-plus"></i></a>
-                                        <a href=""><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="member">
-                            <img src="{{ asset('front/img/team-4.jpg')}}" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>Amanda Jepson</h4>
-                                    <span>Accountant</span>
-                                    <div class="social">
-                                        <a href=""><i class="fa fa-twitter"></i></a>
-                                        <a href=""><i class="fa fa-facebook"></i></a>
-                                        <a href=""><i class="fa fa-google-plus"></i></a>
-                                        <a href=""><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- #team -->
         <!--========================== Contact Section ============================-->
         <section id="contact" class="section-bg wow fadeInUp">
             <div class="container">
                 <div class="section-header">
-                    <h3>Биз билан боғланиш</h3>
+                    <h3>Biz bilan aloqa</h3>
                     <p></p>
                 </div>
                 <div class="row contact-info">

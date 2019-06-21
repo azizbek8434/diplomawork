@@ -20,7 +20,7 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>3768049</h3>
+              <h3>{{ $data['complaint_counts'] }}</h3>
 
               <p>муаммолар сони</p>
             </div>
@@ -35,7 +35,7 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3>{{ $data['solved_complaints_persentage'] }}<sup style="font-size: 20px">%</sup></h3>
 
               <p>Хал килинган муаммолар</p>
             </div>
@@ -50,7 +50,7 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>44</h3>
+              <h3>{{ $data['users_count'] }}</h3>
 
               <p>Инспекторлар сони</p>
             </div>
@@ -65,10 +65,10 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>45</h3>
+              <h3>{{ $data['complaint_types'] }}</h3>
 
               <p>муаммолар тури</p>
-            </div>
+            </div>  
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
@@ -334,7 +334,7 @@
         labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
         datasets: [
           {
-            label: "Population (millions)",
+            label: "Population",
             backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
             data: [2478,5267,734,784,433]
           }
@@ -343,21 +343,26 @@
       options: {
         title: {
           display: true,
-          text: 'Predicted world population (millions) in 2050'
+          text: 'Predicted world population in 2050'
         }
       }
   });
 
   // Bar chart
+
+      $.ajax({
+      type: "get",
+      url: "/dashboard/charts",
+      success: function(data) {
   new Chart(document.getElementById("bar-chart"), {
       type: 'bar',
       data: {
-        labels: ["Фарғона", "Марғилон", "Қўқон", "Қувасой", "Боғдод", "Сух", "Риштон"],
+        labels: data.regions,
         datasets: [
           {
-            label: "Шикоятлар (миллион)",
-            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#ba5850","#6f5850"],
-            data: [2478,5267,734,784,433,2600,3467]
+            label: "Шикоятлар",
+            backgroundColor: data.colors,
+            data: data.count
           }
         ]
       },
@@ -365,9 +370,11 @@
         legend: { display: false },
         title: {
           display: true,
-          text: 'Тахминий шикоятлар (миллион) 2019'
+          text: 'Тахминий шикоятлар 2019'
         }
       }
+  });
+  }
   });
 
 </script>

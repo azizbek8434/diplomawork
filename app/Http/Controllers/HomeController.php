@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Region;
 use App\Complaint;
 use App\ComplaintType;
@@ -27,7 +28,28 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $solved_complaints_count = Complaint::status()->get()->count();
+        $complaint_counts = Complaint::all()->count();
+        $data = [
+        'complaint_counts' => $complaint_counts,
+        'solved_complaints_persentage' =>($complaint_counts * $solved_complaints_count)/100,
+        'users_count' => User::all()->count(),
+        'complaint_types' => ComplaintType::all()->count()
+        ];
+        return view('admin.dashboard', compact('data'));
+    }
+
+    public function chart(){
+
+        $regions = Region::pluck('name')->toArray();
+        $count = Region::withCount('complaints')->pluck('complaints_count')->toArray();
+        $colors = ["#469990", "#911eb4","#e6194B","#000075","#f032e6","#a9a9a9","#800000","#ffe119", "#fffac8", "#bfef45","#f58231", "#000000", "#aaffc3", "#fabebe", "#ba5850","#6f5850","#469990", "#911eb4","#e6194B"];
+        return response([
+            "regions" => $regions, 
+            "count" => $count,
+            "colors" => $colors
+        ]);
+
     }
 
     public function region(Region $region)

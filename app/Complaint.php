@@ -38,6 +38,10 @@ class Complaint extends Model
         $builder->where('complaint_type_id', $type);
     }
 
+	public function scopeStatus($query, $type = 1)
+    {
+        $query->where('status', $type);
+    }
 
 	
 }

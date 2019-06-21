@@ -14,7 +14,7 @@ class UserController extends Controller
     function __construct()
     {
         $this->middleware('permission:user-list', ['except' => ['profile','uprofile']]);
-        $this->middleware('permission:farg-ona-tumani');
+        // $this->middleware('permission:farg-ona-tumani');
     }
     
     /**

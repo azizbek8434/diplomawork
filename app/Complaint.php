@@ -17,6 +17,8 @@ class Complaint extends Model
 	'sender_email',
 	'status'
 	];
+
+	protected $with = ['complaintType'];
 	
 	public function region()
     {

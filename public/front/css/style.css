@@ -718,12 +718,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     transition: 0.3s;
 }
 
-#news .about-col:hover .icon {
-    background-color: #fff;
-}
-
-#news .about-col:hover i {
+#news .about-col:hover {
     color: #18d26e;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0, 0.2);
 }
 
 #news .about-col h2 {

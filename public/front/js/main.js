@@ -89,7 +89,7 @@
     }
 
     // Smooth scroll for the menu and links with .scrollto classes
-    $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function () {
+    $('.nav-menu a, #mobile-nav a, .scrollto, .footer-links a').on('click', function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
             if (target.length) {
@@ -216,16 +216,10 @@
         loop: true,
         items: 1
     });
-
     $('#demo').jsRapCalendar({
         week: 6,
-        months: ['январ', 'феврал', 'март', 'апрел', 'май', 'июн', 'июл', 'август', 'сентябр',
-            'октябр'
-        ],
-        days: ['як', 'ду', 'се', 'чор', 'пай', 'жу', 'шан'],
         onClick: function (y, m, d) {
             alert(y + '-' + m + '-' + d);
         }
     });
-
 })(jQuery);

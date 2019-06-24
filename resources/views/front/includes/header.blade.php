@@ -7,17 +7,17 @@
         </div>
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li class="menu-active"><a href="#intro">Asosiy </a></li>
-                <li><a href="#about">Biz haqimizda</a></li>
-                <li><a href="#services">Hizmatlarimiz</a></li>
-                <li><a href="#facts">Statistika</a></li>
-                <li><a href="#contact">Biz bilan aloqa</a></li>
+                <li class="menu-active"><a href="#intro">Асосий </a></li>
+                <li><a href="#news">Биз ҳақимизда</a></li>
+                <li><a href="#services">Хизматлар</a></li>
+                <li><a href="#facts">Статистика</a></li>
+                <li><a href="#contact">Биз билан алоқа</a></li>
                 @if (Route::has('login'))
                 <li>
                     @auth
-                        <a href="{{ url('/dashboard') }}">Admin Panel</a>
+                        <a href="{{ url('/dashboard') }}">{{ auth()->user()->name }}</a>
                     @else
-                        <a href="{{ route('login') }}">Admin Panel</a>
+                        <a href="{{ route('login') }}">Кириш</a>
                     @endauth
                 </li>
                 @endif

@@ -8,13 +8,13 @@
                </div>
 
                <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Foydali havolalar</h4>
+                    <h4>ФОЙДАЛИ ҲАВОЛАЛАР</h4>
                     <ul>
-                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Asosiy</a></li>
-                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Biz haqimizda</a></li>
-                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Hizmatlarimiz</a></li>
-                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Statistika</a></li>
-                       <li><i class="ion-ios-arrow-right"></i> <a href="#">Biz bilan aloqa</a></li>
+                       <li><i class="ion-ios-arrow-right"></i> <a href="#intro">Асосий</a></li>
+                       <li><i class="ion-ios-arrow-right"></i> <a href="#news">Биз ҳақимизда</a></li>
+                       <li><i class="ion-ios-arrow-right"></i> <a href="#services">Хизматларимиз</a></li>
+                       <li><i class="ion-ios-arrow-right"></i> <a href="#facts">Статистика</a></li>
+                       <li><i class="ion-ios-arrow-right"></i> <a href="#contact">Биз билан алоқа</a></li>
                     </ul>
                </div>
 

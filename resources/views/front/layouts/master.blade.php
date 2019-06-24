@@ -61,50 +61,46 @@
     </section><!-- #intro -->
     <main id="main">
         <!--========================== About Us Section ============================-->
-        <section id="about">
+        <section id="news">
             <div class="container">
                 <header class="section-header">
-                    <h3>Biz haqimizda</h3>
-                    <p>Biz sizlarga hizmat ko'rsatishdan shodmiz. Biz aholining muammolarini o'rganish ularni hal qilish 
-                    yo'llarini qidirmoqdamiz. Bizning guruh ko'plab muammolarning umumiy yechimlarini izlamoqda.</p>
+                    <h3>БИЗ ҲАҚИМИЗДА</h3>
+                    <p>Биз сизларга хизмат кўрсатишдан шодмиз. Биз аҳолининг муаммоларини ўрганиш уларни ҳал қилиш йўлларини қидирмоқдамиз. Бизнинг гуруҳ кўплаб муаммоларнинг умумий ечимларини изламоқда..</p>
                 </header>
                 <div class="row about-cols">
-                    <div class="col-md-4 wow fadeInUp">
+                    <div class="col-md-4 wow">
                         <div class="about-col">
                             <div class="img">
                                 <img src="{{ asset('front/img/about-mission.jpg')}}" alt="" class="img-fluid">
-                                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                                {{-- <div class="icon"><i class="ion-ios-speedometer-outline"></i></div> --}}
                             </div>
-                            <h2 class="title"><a href="#">Bizning vazifamiz</a></h2>
+                            <h2 class="title"><a href="#">Бизнинг вазифамиз</a></h2>
                             <p>
-                                Bizning vazifamiz xalq bilan muloqotda bo'lish. Ularning muammolarni yig'ish. Bu muammolarni
-                                o'rganilib chiqish. Ularni hal qilishdan iborat.
+                                Бизнинг вазифамиз халқ билан мулоқотда бўлиш. Уларнинг муаммоларни тинглаш. Бу муаммоларни ўрганилиб чиқиш. Уларга ечимлар топишдан иборат.
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-md-4 wow" data-wow-delay="0.1s">
                         <div class="about-col">
                             <div class="img">
                                 <img src="{{ asset('front/img/about-plan.jpg')}}" alt="" class="img-fluid">
-                                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                                {{-- <div class="icon"><i class="ion-ios-list-outline"></i></div> --}}
                             </div>
-                            <h2 class="title"><a href="#">Bizning maqsadimiz</a></h2>
+                            <h2 class="title"><a href="#">Бизнинг мақсадимиз</a></h2>
                             <p>
-                                Aholining ijtimoiy muammolarini o'rganib ularni hal qilish. Xalqning og'irini yengil qilishdir.
-                                Aholining talab va istaklarini qondirish. Ijtimoiy yordamga muhtojlarga yordam berish. 
+                                Аҳолининг ижтимоий муаммоларини ўрганиб уларни ҳал қилиш. Халқнинг оғирини енгил қилишдир. Ижтимоий ёрдамга муҳтожларга ёрдам бериш. 
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-md-4 wow" data-wow-delay="0.2s">
                         <div class="about-col">
                             <div class="img">
                                 <img src="{{ asset('front/img/about-vision.jpg')}}" alt="" class="img-fluid">
-                                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                                {{-- <div class="icon"><i class="ion-ios-eye-outline"></i></div> --}}
                             </div>
-                            <h2 class="title"><a href="#">Biz ko'ramiz</a></h2>
+                            <h2 class="title"><a href="#">Биз кузатамиз</a></h2>
                             <p>
-                                Bizga yuborilgan har bitta fikr mulohaza biz uchun ahamiyatli. Bizga sizning fikrlaringiz qiziq.
-                                Biz bu fikrlarni inobatga olishga harakat qilamiz. 
+                                Бизга юборилган ҳар битта фикр мулоҳаза биз учун аҳамиятли. Бизга сизнинг фикрларингиз қизиқ. Биз бу фикрларни инобатга олишга ҳаракат қиламиз. 
                             </p>
                         </div>
                     </div>
@@ -114,52 +110,52 @@
         <!--========================== Services Section ============================-->
         <section id="services">
             <div class="container">
-                <header class="section-header wow fadeInUp">
-                    <h3>HIZMATLARIMIZ</h3>
-                    <p>O'zbekiston Respublikasi Farg'ona viloyati bosh prokuraturasi sizga o'z hizmatlarini taklif etadi.</p>
+                <header class="section-header wow">
+                    <h3>ХИЗМАТЛАРИМИЗ</h3>
+                    <p>Ўзбекистон Республикаси Фарғона вилояти бош прокуратураси сизга ўз ҳизматларини таклиф этади.</p>
                 </header>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="col-lg-4 col-md-6 box wow" data-wow-duration="1.4s">
                         <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-                        <h4 class="title"><a href="">Jinoyatchilikni oldini olish</a></h4>
-                        <p class="description">Aholi orasida jinoyatchilikka qarshi kurashish shiori asosida birlashib bunga qarshi 
-                        kurashish</p>
+                        <h4 class="title"><a href="#">Жиноятчиликни олдини олиш</a></h4>
+                        <p class="description">Аҳоли орасида жиноятчиликка қарши курашиш шиори асосида бирлашиб бунга қарши 
+                        курашиш</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="col-lg-4 col-md-6 box wow" data-wow-duration="1.4s">
                         <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
-                        <h4 class="title"><a href="">Xalq muammolari</a></h4>
-                        <p class="description">Xalqning muammolarini yig'ish. Ularni to'plash ular uchun umumiy yechimni topish.
+                        <h4 class="title"><a href="#">Халқ муаммолари</a></h4>
+                        <p class="description">Халқнинг муаммоларини йиғиш. Уларни тўплаш улар учун умумий ечимни топиш.
                         </p>
                     </div>
-                    <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="col-lg-4 col-md-6 box wow" data-wow-duration="1.4s">
                         <div class="icon"><i class="ion-ios-paper-outline"></i></div>
-                        <h4 class="title"><a href="">Onlayn qabul</a></h4>
-                        <p class="description">Tadbirkorlar uchun qulaylik tug'dirish maqsadida onlayn murojatlarni qabul qilish.
-                        Ularni fikr mulohazalarini o'rganish.</p>
+                        <h4 class="title"><a href="#">Онлайн қабул</a></h4>
+                        <p class="description">Тадбиркорлар учун қулайлик туғдириш мақсадида онлайн мурожатларни қабул қилиш.
+                        Уларни фикр мулоҳазаларини ўрганиш.</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                    <div class="col-lg-4 col-md-6 box wow" data-wow-delay="0.1s" data-wow-duration="1.4s">
                         <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                        <h4 class="title"><a href="">Ish bilan taminlash</a></h4>
-                        <p class="description">Ishga layoqatli odamlarni bo'sh ish o'rinlari bilan taminlash.
-                        Ularga kerakli bo'lgan ijtimoiy yordam ko'rsatish.</p>
+                        <h4 class="title"><a href="#">Иш билан таминлаш</a></h4>
+                        <p class="description">Ишга лаёқатли одамларни бўш иш ўринлари билан таминлаш.
+                        Уларга керакли бўлган ижтимоий ёрдам кўрсатиш.</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                    <div class="col-lg-4 col-md-6 box wow" data-wow-delay="0.1s" data-wow-duration="1.4s">
                         <div class="icon"><i class="ion-ios-barcode-outline"></i></div>
-                        <h4 class="title"><a href="">Murojaatlar statistikasi</a></h4>
-                        <p class="description">Bizga kelib tushgan murojatlarni statistik ko'rinishini
-                        shakllantirish. Ularni shaffoflik orqali xalq bilan tanishtirish</p>
+                        <h4 class="title"><a href="#">МУРОЖААТЛАР СТАТИСТИКАСИ</a></h4>
+                        <p class="description">Бизга келиб тушган мурожатларни статистик кўринишини
+                        шакллантириш. Уларни шаффофлик орқали халқ билан таништириш</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                    <div class="col-lg-4 col-md-6 box wow" data-wow-delay="0.1s" data-wow-duration="1.4s">
                         <div class="icon"><i class="ion-ios-people-outline"></i></div>
-                        <h4 class="title"><a href="">Ijtimoiy himoya</a></h4>
-                        <p class="description">Ijtimoiy himoyaga muhtoj insonlar uchun yordam ko'rsatish 
-                        ularni muammolarini hal qilish.</p>
+                        <h4 class="title"><a href="#">Ижтимоий ҳимоя</a></h4>
+                        <p class="description">Ижтимоий ҳимояга муҳтож инсонлар учун ёрдам кўрсатиш 
+                        уларни муаммоларини ҳал қилиш.</p>
                     </div>
                 </div>
             </div>
         </section><!-- #services -->
         <!--========================== Call To Action Section ============================-->
-        <section id="call-to-action" class="wow fadeIn">
+        <section id="call-to-action" class="wow">
             <div class="container text-center">
                 <h3>Бизнинг хабарномамиз</h3>
                 <p> Ўзбекистон Республикаси Бош Прокуратураси томонидан олиб борилаётган ишлар ва янгиликлардан ҳабардор
@@ -172,38 +168,59 @@
             </div>
         </section><!-- #call-to-action -->
         <!--========================== Facts Section ============================-->
-        <section id="facts" class="wow fadeIn">
+        <section id="facts" class="wow">
             <div class="container">
                 <header class="section-header">
-                    <h3>Murojaatlar statistikasi</h3>
-                    <p>Sayt orqali shikoyatlar bo'yicha statistika</p>
+                    <h3>Мурожаатлар статистикаси</h3>
+                    <p>Сайт орқали шикоятлар бўйича статистика</p>
                 </header>
                 <div class="row counters">
                     <div class="col-lg-3 col-6 text-center">
-                        <span data-toggle="counter-up">274</span>
-                        <p>Fuqarolar</p>
+                        <span data-toggle="counter-up">{{ $data['complaint_counts'] ?? 274 }}</span>
+                        <p>Шикоятлар</p>
                     </div>
                     <div class="col-lg-3 col-6 text-center">
-                        <span data-toggle="counter-up">421</span>
-                        <p>SHikoyatlar</p>
+                        <span data-toggle="counter-up">{{ $data['solved_complaints_persentage'] ?? "42" }}</span>
+                        <p>Ҳал қилинган муаммолар</p>
                     </div>
                     <div class="col-lg-3 col-6 text-center">
-                        <span data-toggle="counter-up">1,364</span>
-                        <p>Yordam vaqti</p>
+                        <span data-toggle="counter-up">{{ $data['users_count'] ?? 21 }}</span>
+                        <p>Инспекторлар</p>
                     </div>
                     <div class="col-lg-3 col-6 text-center">
-                        <span data-toggle="counter-up">18</span>
-                        <p>Inspektorlar</p>
+                        <span data-toggle="counter-up">{{ $data['complaint_types'] ?? 210 }}</span>
+                        <p>Шикоят турлари</p>
                     </div>
                 </div>
             </div>
+    <section id="testimonials" class="wow">
+      <div class="container">
+        <div class="owl-carousel testimonials-carousel">
+            @foreach ($complaints as $complaint)
+                <div class="testimonial-item">
+                    <h3>{{ $complaint->sender_full_name }}</h3>
+                    <h4>{{ "Шикоят тури: ".$complaint->complaintType->name }}</h4>
+                    <p>
+                    <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+                    {{ $complaint->title }}
+                    <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+                    </p>
+          </div>
+            @endforeach
+        </div>
+      </div>
+    </section><!-- #testimonials -->
         </section><!-- #facts -->
+
+<!--========================== Testimonials ============================-->
+    
+
         <!--========================== Contact Section ============================-->
-        <section id="contact" class="section-bg wow fadeInUp">
+        <section id="contact" class="section-bg wow">
             <div class="container">
                 <div class="section-header">
-                    <h3>Biz bilan aloqa</h3>
-                    <p></p>
+                    <h3>Биз билан алоқа</h3>
+                    <p>Бизга онлайн тарзда ҳабар жўнатинг.</p>
                 </div>
                 <div class="row contact-info">
                     <div class="col-md-4">
@@ -233,12 +250,13 @@
                     <div id="errormessage"></div>
                     <form action="{{ route('message.store') }}" method="post" role="form" class="contactForm">
                     {{ csrf_field() }}
+                    {{ method_field('POST') }}
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="text" name="name" class="form-control" id="name"
+                                <input type="text" name="full_name" class="form-control" id="name"
                                     placeholder="Исм шарифингиз" data-rule="minlen:4"
                                     data-msg="Илтимос, камида 4 та белгини киритинг" />
-                                <div class="validation"></div>
+                                    <div class="validation"></div>
                             </div>
                             <div class="form-group col-md-6">
                                 <input type="email" class="form-control" name="email" id="email" placeholder="Э-Почта"
@@ -262,7 +280,7 @@
             </div>
         </section><!-- #contact -->
         <!--========================== Clients Section ============================-->
-        <section id="clients" class="wow fadeInUp">
+        <section id="clients" class="wow">
             <div class="container">
                 <header class="section-header">
                     <h3>Фойдали Ҳаволалар</h3>
@@ -284,20 +302,6 @@
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     <div id="preloader"></div>
     @include('front.includes.script')
-    <script>
-        $(document).ready(function () {
-            $("#demo-calendar").simpleCalendar({
-                months: ['январ', 'феврал', 'март', 'апрел', 'май', 'июн', 'июл', 'август', 'сентябр',
-                    'октябр'
-                ],
-                days: ['як', 'ду', 'се', 'чор', 'пай', 'жу', 'шан'],
-            });
-            tippy('.day.event', {
-                theme: 'translucent',
-            });
-        });
-
-    </script>
 </body>
 
 </html>

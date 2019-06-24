@@ -19,6 +19,7 @@ Route::group([
 ], function() {
     Route::redirect('/', '/dashboard/main');
     Route::get('/charts', 'HomeController@chart');
+    Route::get('/menupdate', 'MenuController@update');
     Route::get('/main', 'HomeController@index')->name('dashboard');
     Route::get('/add-complaint', 'ComplaintController@showComplaintForm')->name('add.complaint');
     Route::post('/store-complaint', 'ComplaintController@store')->name('store.complaint');
